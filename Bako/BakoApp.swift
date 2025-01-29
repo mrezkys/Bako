@@ -11,7 +11,9 @@ import SwiftUI
 struct BakoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                HomeView()
+            }
         }
     }
 }

@@ -7,18 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A65B4C912CEF9A21009E5B20 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4C902CEF9A21009E5B20 /* HomeView.swift */; };
+		A65B4C942CEFBE98009E5B20 /* TrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4C932CEFBE98009E5B20 /* TrackerView.swift */; };
+		A65B4C972CEFC66D009E5B20 /* SelectCategoryFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4C962CEFC66D009E5B20 /* SelectCategoryFeelingView.swift */; };
+		A65B4C9D2CEFC6A0009E5B20 /* SelectFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4C9C2CEFC6A0009E5B20 /* SelectFeelingView.swift */; };
+		A65B4CA12CF0A495009E5B20 /* PositiveEmotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4CA02CF0A495009E5B20 /* PositiveEmotions.swift */; };
+		A65B4CA32CF0D829009E5B20 /* FormFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4CA22CF0D829009E5B20 /* FormFeelingView.swift */; };
+		A65B4CA52CF260BA009E5B20 /* SuccessSubmitFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */; };
 		A67398292CEBAF6700967654 /* BakoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67398282CEBAF6700967654 /* BakoApp.swift */; };
 		A673982B2CEBAF6700967654 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673982A2CEBAF6700967654 /* ContentView.swift */; };
-		A673982D2CEBAF6800967654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A673982C2CEBAF6800967654 /* Assets.xcassets */; };
+		A673982D2CEBAF6800967654 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A673982C2CEBAF6800967654 /* Images.xcassets */; };
 		A67398302CEBAF6800967654 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A673982F2CEBAF6800967654 /* Preview Assets.xcassets */; };
+		A673983A2CEBB0BB00967654 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67398392CEBB0BB00967654 /* OnboardingView.swift */; };
+		A67398412CEBB2C900967654 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67398402CEBB2C900967654 /* Colors.xcassets */; };
+		A67398502CEBB2F400967654 /* PlusJakartaSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A67398422CEBB2F400967654 /* PlusJakartaSans-Italic.ttf */; };
+		A67398512CEBB2F400967654 /* PlusJakartaSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A67398432CEBB2F400967654 /* PlusJakartaSans-ExtraLightItalic.ttf */; };
+		A67398522CEBB2F400967654 /* PlusJakartaSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A67398442CEBB2F400967654 /* PlusJakartaSans-MediumItalic.ttf */; };
+		A67398532CEBB2F400967654 /* PlusJakartaSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A67398452CEBB2F400967654 /* PlusJakartaSans-ExtraLight.ttf */; };
+		A67398542CEBB2F400967654 /* PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A67398462CEBB2F400967654 /* PlusJakartaSans-Medium.ttf */; };
+		A67398552CEBB2F400967654 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A67398472CEBB2F400967654 /* PlusJakartaSans-ExtraBoldItalic.ttf */; };
+		A67398562CEBB2F400967654 /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A67398482CEBB2F400967654 /* PlusJakartaSans-Regular.ttf */; };
+		A67398572CEBB2F400967654 /* PlusJakartaSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A67398492CEBB2F400967654 /* PlusJakartaSans-LightItalic.ttf */; };
+		A67398582CEBB2F400967654 /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A673984A2CEBB2F400967654 /* PlusJakartaSans-SemiBoldItalic.ttf */; };
+		A67398592CEBB2F400967654 /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A673984B2CEBB2F400967654 /* PlusJakartaSans-ExtraBold.ttf */; };
+		A673985A2CEBB2F400967654 /* PlusJakartaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A673984C2CEBB2F400967654 /* PlusJakartaSans-Light.ttf */; };
+		A673985B2CEBB2F400967654 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A673984D2CEBB2F400967654 /* PlusJakartaSans-Bold.ttf */; };
+		A673985C2CEBB2F400967654 /* PlusJakartaSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A673984E2CEBB2F400967654 /* PlusJakartaSans-BoldItalic.ttf */; };
+		A673985D2CEBB2F400967654 /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A673984F2CEBB2F400967654 /* PlusJakartaSans-SemiBold.ttf */; };
+		A67398612CEBB47300967654 /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67398602CEBB47300967654 /* Text+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A65B4C902CEF9A21009E5B20 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A65B4C932CEFBE98009E5B20 /* TrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerView.swift; sourceTree = "<group>"; };
+		A65B4C962CEFC66D009E5B20 /* SelectCategoryFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryFeelingView.swift; sourceTree = "<group>"; };
+		A65B4C9C2CEFC6A0009E5B20 /* SelectFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFeelingView.swift; sourceTree = "<group>"; };
+		A65B4CA02CF0A495009E5B20 /* PositiveEmotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveEmotions.swift; sourceTree = "<group>"; };
+		A65B4CA22CF0D829009E5B20 /* FormFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFeelingView.swift; sourceTree = "<group>"; };
+		A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSubmitFeelingView.swift; sourceTree = "<group>"; };
 		A67398252CEBAF6700967654 /* Bako.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bako.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67398282CEBAF6700967654 /* BakoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakoApp.swift; sourceTree = "<group>"; };
 		A673982A2CEBAF6700967654 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A673982C2CEBAF6800967654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A673982C2CEBAF6800967654 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A673982F2CEBAF6800967654 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A67398392CEBB0BB00967654 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A67398402CEBB2C900967654 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A67398422CEBB2F400967654 /* PlusJakartaSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Italic.ttf"; sourceTree = "<group>"; };
+		A67398432CEBB2F400967654 /* PlusJakartaSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		A67398442CEBB2F400967654 /* PlusJakartaSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A67398452CEBB2F400967654 /* PlusJakartaSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		A67398462CEBB2F400967654 /* PlusJakartaSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Medium.ttf"; sourceTree = "<group>"; };
+		A67398472CEBB2F400967654 /* PlusJakartaSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		A67398482CEBB2F400967654 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
+		A67398492CEBB2F400967654 /* PlusJakartaSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		A673984A2CEBB2F400967654 /* PlusJakartaSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		A673984B2CEBB2F400967654 /* PlusJakartaSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A673984C2CEBB2F400967654 /* PlusJakartaSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Light.ttf"; sourceTree = "<group>"; };
+		A673984D2CEBB2F400967654 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
+		A673984E2CEBB2F400967654 /* PlusJakartaSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A673984F2CEBB2F400967654 /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		A673985E2CEBB35B00967654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A67398602CEBB47300967654 /* Text+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +81,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A65B4C8F2CEF9A16009E5B20 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A65B4C902CEF9A21009E5B20 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A65B4C922CEFBE8C009E5B20 /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				A65B4C932CEFBE98009E5B20 /* TrackerView.swift */,
+			);
+			path = Tracker;
+			sourceTree = "<group>";
+		};
+		A65B4C952CEFC649009E5B20 /* Feeling */ = {
+			isa = PBXGroup;
+			children = (
+				A65B4C962CEFC66D009E5B20 /* SelectCategoryFeelingView.swift */,
+				A65B4C9C2CEFC6A0009E5B20 /* SelectFeelingView.swift */,
+				A65B4CA22CF0D829009E5B20 /* FormFeelingView.swift */,
+				A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */,
+			);
+			path = Feeling;
+			sourceTree = "<group>";
+		};
+		A65B4C9E2CF0A485009E5B20 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				A65B4C9F2CF0A48A009E5B20 /* Mock */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		A65B4C9F2CF0A48A009E5B20 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				A65B4CA02CF0A495009E5B20 /* PositiveEmotions.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		A673981C2CEBAF6700967654 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +143,11 @@
 		A67398272CEBAF6700967654 /* Bako */ = {
 			isa = PBXGroup;
 			children = (
+				A673985E2CEBB35B00967654 /* Info.plist */,
+				A673983B2CEBB2A300967654 /* Core */,
+				A67398362CEBB0A100967654 /* Modules */,
 				A67398282CEBAF6700967654 /* BakoApp.swift */,
 				A673982A2CEBAF6700967654 /* ContentView.swift */,
-				A673982C2CEBAF6800967654 /* Assets.xcassets */,
 				A673982E2CEBAF6800967654 /* Preview Content */,
 			);
 			path = Bako;
@@ -65,6 +159,98 @@
 				A673982F2CEBAF6800967654 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A67398362CEBB0A100967654 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A65B4C952CEFC649009E5B20 /* Feeling */,
+				A65B4C922CEFBE8C009E5B20 /* Tracker */,
+				A65B4C8F2CEF9A16009E5B20 /* Home */,
+				A67398382CEBB0AD00967654 /* Splash */,
+				A67398372CEBB0A500967654 /* Onboarding */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A67398372CEBB0A500967654 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A67398392CEBB0BB00967654 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A67398382CEBB0AD00967654 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		A673983B2CEBB2A300967654 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A65B4C9E2CF0A485009E5B20 /* Constant */,
+				A673985F2CEBB46500967654 /* Extensions */,
+				A673983C2CEBB2A700967654 /* Assets */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A673983C2CEBB2A700967654 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A673983F2CEBB2BA00967654 /* Colors */,
+				A673983E2CEBB2B600967654 /* Fonts */,
+				A673983D2CEBB2AE00967654 /* Images */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A673983D2CEBB2AE00967654 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A673982C2CEBAF6800967654 /* Images.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		A673983E2CEBB2B600967654 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A673984D2CEBB2F400967654 /* PlusJakartaSans-Bold.ttf */,
+				A673984E2CEBB2F400967654 /* PlusJakartaSans-BoldItalic.ttf */,
+				A673984B2CEBB2F400967654 /* PlusJakartaSans-ExtraBold.ttf */,
+				A67398472CEBB2F400967654 /* PlusJakartaSans-ExtraBoldItalic.ttf */,
+				A67398452CEBB2F400967654 /* PlusJakartaSans-ExtraLight.ttf */,
+				A67398432CEBB2F400967654 /* PlusJakartaSans-ExtraLightItalic.ttf */,
+				A67398422CEBB2F400967654 /* PlusJakartaSans-Italic.ttf */,
+				A673984C2CEBB2F400967654 /* PlusJakartaSans-Light.ttf */,
+				A67398492CEBB2F400967654 /* PlusJakartaSans-LightItalic.ttf */,
+				A67398462CEBB2F400967654 /* PlusJakartaSans-Medium.ttf */,
+				A67398442CEBB2F400967654 /* PlusJakartaSans-MediumItalic.ttf */,
+				A67398482CEBB2F400967654 /* PlusJakartaSans-Regular.ttf */,
+				A673984F2CEBB2F400967654 /* PlusJakartaSans-SemiBold.ttf */,
+				A673984A2CEBB2F400967654 /* PlusJakartaSans-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A673983F2CEBB2BA00967654 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				A67398402CEBB2C900967654 /* Colors.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		A673985F2CEBB46500967654 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A67398602CEBB47300967654 /* Text+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +311,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67398512CEBB2F400967654 /* PlusJakartaSans-ExtraLightItalic.ttf in Resources */,
+				A67398502CEBB2F400967654 /* PlusJakartaSans-Italic.ttf in Resources */,
+				A67398592CEBB2F400967654 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
+				A67398572CEBB2F400967654 /* PlusJakartaSans-LightItalic.ttf in Resources */,
+				A67398582CEBB2F400967654 /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */,
+				A673985C2CEBB2F400967654 /* PlusJakartaSans-BoldItalic.ttf in Resources */,
+				A673985D2CEBB2F400967654 /* PlusJakartaSans-SemiBold.ttf in Resources */,
+				A67398532CEBB2F400967654 /* PlusJakartaSans-ExtraLight.ttf in Resources */,
+				A673985B2CEBB2F400967654 /* PlusJakartaSans-Bold.ttf in Resources */,
+				A67398562CEBB2F400967654 /* PlusJakartaSans-Regular.ttf in Resources */,
+				A67398542CEBB2F400967654 /* PlusJakartaSans-Medium.ttf in Resources */,
+				A67398552CEBB2F400967654 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */,
+				A673985A2CEBB2F400967654 /* PlusJakartaSans-Light.ttf in Resources */,
+				A67398522CEBB2F400967654 /* PlusJakartaSans-MediumItalic.ttf in Resources */,
+				A67398412CEBB2C900967654 /* Colors.xcassets in Resources */,
 				A67398302CEBAF6800967654 /* Preview Assets.xcassets in Resources */,
-				A673982D2CEBAF6800967654 /* Assets.xcassets in Resources */,
+				A673982D2CEBAF6800967654 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +338,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67398612CEBB47300967654 /* Text+Extensions.swift in Sources */,
+				A65B4CA12CF0A495009E5B20 /* PositiveEmotions.swift in Sources */,
+				A673983A2CEBB0BB00967654 /* OnboardingView.swift in Sources */,
 				A673982B2CEBAF6700967654 /* ContentView.swift in Sources */,
+				A65B4CA32CF0D829009E5B20 /* FormFeelingView.swift in Sources */,
+				A65B4CA52CF260BA009E5B20 /* SuccessSubmitFeelingView.swift in Sources */,
+				A65B4C912CEF9A21009E5B20 /* HomeView.swift in Sources */,
 				A67398292CEBAF6700967654 /* BakoApp.swift in Sources */,
+				A65B4C972CEFC66D009E5B20 /* SelectCategoryFeelingView.swift in Sources */,
+				A65B4C942CEFBE98009E5B20 /* TrackerView.swift in Sources */,
+				A65B4C9D2CEFC6A0009E5B20 /* SelectFeelingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -275,11 +485,13 @@
 				DEVELOPMENT_TEAM = 5LSQ3C9W8U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bako/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +516,13 @@
 				DEVELOPMENT_TEAM = 5LSQ3C9W8U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bako/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
