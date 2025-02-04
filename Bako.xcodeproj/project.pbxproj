@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A601B7B12D50FC5A001FBF99 /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A601B7B02D50FC52001FBF99 /* HomeReducer.swift */; };
+		A601B7B32D513E8D001FBF99 /* TrackerReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A601B7B22D513E87001FBF99 /* TrackerReducer.swift */; };
 		A65B4C912CEF9A21009E5B20 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4C902CEF9A21009E5B20 /* HomeView.swift */; };
 		A65B4C942CEFBE98009E5B20 /* TrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4C932CEFBE98009E5B20 /* TrackerView.swift */; };
 		A65B4C972CEFC66D009E5B20 /* SelectCategoryFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4C962CEFC66D009E5B20 /* SelectCategoryFeelingView.swift */; };
@@ -14,7 +16,6 @@
 		A65B4CA12CF0A495009E5B20 /* PositiveEmotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4CA02CF0A495009E5B20 /* PositiveEmotions.swift */; };
 		A65B4CA32CF0D829009E5B20 /* FormFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4CA22CF0D829009E5B20 /* FormFeelingView.swift */; };
 		A65B4CA52CF260BA009E5B20 /* SuccessSubmitFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */; };
-		A67398292CEBAF6700967654 /* BakoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67398282CEBAF6700967654 /* BakoApp.swift */; };
 		A673982B2CEBAF6700967654 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673982A2CEBAF6700967654 /* ContentView.swift */; };
 		A673982D2CEBAF6800967654 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A673982C2CEBAF6800967654 /* Images.xcassets */; };
 		A67398302CEBAF6800967654 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A673982F2CEBAF6800967654 /* Preview Assets.xcassets */; };
@@ -35,9 +36,21 @@
 		A673985C2CEBB2F400967654 /* PlusJakartaSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A673984E2CEBB2F400967654 /* PlusJakartaSans-BoldItalic.ttf */; };
 		A673985D2CEBB2F400967654 /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A673984F2CEBB2F400967654 /* PlusJakartaSans-SemiBold.ttf */; };
 		A67398612CEBB47300967654 /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67398602CEBB47300967654 /* Text+Extensions.swift */; };
+		A67920FE2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67920FD2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift */; };
+		A67921002D521AEA000BAAD6 /* SelectFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67920FF2D521AEA000BAAD6 /* SelectFeelingReducer.swift */; };
+		A67921022D521AF7000BAAD6 /* FormFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67921012D521AF7000BAAD6 /* FormFeelingReducer.swift */; };
+		A6A71EF62D4A599F008F9977 /* BakoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71EF52D4A599F008F9977 /* BakoApp.swift */; };
+		A6A71EF82D4A59B7008F9977 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71EF72D4A59B7008F9977 /* AppReducer.swift */; };
+		A6A71EFB2D4A5A39008F9977 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = A6A71EFA2D4A5A39008F9977 /* ComposableArchitecture */; };
+		A6A71EFD2D4A5B84008F9977 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71EFC2D4A5B84008F9977 /* AppStore.swift */; };
+		A6A71EFF2D4A5CA5008F9977 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71EFE2D4A5CA5008F9977 /* AppView.swift */; };
+		A6A71F012D4A5F65008F9977 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71F002D4A5F65008F9977 /* Route.swift */; };
+		A6A71F032D4A8609008F9977 /* OnboardingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71F022D4A8609008F9977 /* OnboardingReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A601B7B02D50FC52001FBF99 /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
+		A601B7B22D513E87001FBF99 /* TrackerReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerReducer.swift; sourceTree = "<group>"; };
 		A65B4C902CEF9A21009E5B20 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A65B4C932CEFBE98009E5B20 /* TrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerView.swift; sourceTree = "<group>"; };
 		A65B4C962CEFC66D009E5B20 /* SelectCategoryFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryFeelingView.swift; sourceTree = "<group>"; };
@@ -46,7 +59,6 @@
 		A65B4CA22CF0D829009E5B20 /* FormFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFeelingView.swift; sourceTree = "<group>"; };
 		A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSubmitFeelingView.swift; sourceTree = "<group>"; };
 		A67398252CEBAF6700967654 /* Bako.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bako.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A67398282CEBAF6700967654 /* BakoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakoApp.swift; sourceTree = "<group>"; };
 		A673982A2CEBAF6700967654 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A673982C2CEBAF6800967654 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A673982F2CEBAF6800967654 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -68,6 +80,15 @@
 		A673984F2CEBB2F400967654 /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		A673985E2CEBB35B00967654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A67398602CEBB47300967654 /* Text+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extensions.swift"; sourceTree = "<group>"; };
+		A67920FD2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryFeelingReducer.swift; sourceTree = "<group>"; };
+		A67920FF2D521AEA000BAAD6 /* SelectFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFeelingReducer.swift; sourceTree = "<group>"; };
+		A67921012D521AF7000BAAD6 /* FormFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFeelingReducer.swift; sourceTree = "<group>"; };
+		A6A71EF52D4A599F008F9977 /* BakoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BakoApp.swift; sourceTree = "<group>"; };
+		A6A71EF72D4A59B7008F9977 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		A6A71EFC2D4A5B84008F9977 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		A6A71EFE2D4A5CA5008F9977 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		A6A71F002D4A5F65008F9977 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		A6A71F022D4A8609008F9977 /* OnboardingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A71EFB2D4A5A39008F9977 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +106,7 @@
 		A65B4C8F2CEF9A16009E5B20 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A601B7B02D50FC52001FBF99 /* HomeReducer.swift */,
 				A65B4C902CEF9A21009E5B20 /* HomeView.swift */,
 			);
 			path = Home;
@@ -92,20 +115,19 @@
 		A65B4C922CEFBE8C009E5B20 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				A601B7B22D513E87001FBF99 /* TrackerReducer.swift */,
 				A65B4C932CEFBE98009E5B20 /* TrackerView.swift */,
 			);
 			path = Tracker;
 			sourceTree = "<group>";
 		};
-		A65B4C952CEFC649009E5B20 /* Feeling */ = {
+		A65B4C952CEFC649009E5B20 /* SelectFeeling */ = {
 			isa = PBXGroup;
 			children = (
-				A65B4C962CEFC66D009E5B20 /* SelectCategoryFeelingView.swift */,
+				A67920FF2D521AEA000BAAD6 /* SelectFeelingReducer.swift */,
 				A65B4C9C2CEFC6A0009E5B20 /* SelectFeelingView.swift */,
-				A65B4CA22CF0D829009E5B20 /* FormFeelingView.swift */,
-				A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */,
 			);
-			path = Feeling;
+			path = SelectFeeling;
 			sourceTree = "<group>";
 		};
 		A65B4C9E2CF0A485009E5B20 /* Constant */ = {
@@ -144,9 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				A673985E2CEBB35B00967654 /* Info.plist */,
+				A6F8DBC52D4A59730082DC0D /* App */,
 				A673983B2CEBB2A300967654 /* Core */,
 				A67398362CEBB0A100967654 /* Modules */,
-				A67398282CEBAF6700967654 /* BakoApp.swift */,
 				A673982A2CEBAF6700967654 /* ContentView.swift */,
 				A673982E2CEBAF6800967654 /* Preview Content */,
 			);
@@ -164,10 +186,12 @@
 		A67398362CEBB0A100967654 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				A65B4C952CEFC649009E5B20 /* Feeling */,
+				A67920FC2D5217EE000BAAD6 /* SuccessSubmitFeelingView */,
+				A67920FB2D5217E1000BAAD6 /* FormFeeling */,
+				A67920FA2D5217C6000BAAD6 /* SelectCategoryFeeling */,
+				A65B4C952CEFC649009E5B20 /* SelectFeeling */,
 				A65B4C922CEFBE8C009E5B20 /* Tracker */,
 				A65B4C8F2CEF9A16009E5B20 /* Home */,
-				A67398382CEBB0AD00967654 /* Splash */,
 				A67398372CEBB0A500967654 /* Onboarding */,
 			);
 			path = Modules;
@@ -177,15 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				A67398392CEBB0BB00967654 /* OnboardingView.swift */,
+				A6A71F022D4A8609008F9977 /* OnboardingReducer.swift */,
 			);
 			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		A67398382CEBB0AD00967654 /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Splash;
 			sourceTree = "<group>";
 		};
 		A673983B2CEBB2A300967654 /* Core */ = {
@@ -253,6 +271,44 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A67920FA2D5217C6000BAAD6 /* SelectCategoryFeeling */ = {
+			isa = PBXGroup;
+			children = (
+				A67920FD2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift */,
+				A65B4C962CEFC66D009E5B20 /* SelectCategoryFeelingView.swift */,
+			);
+			path = SelectCategoryFeeling;
+			sourceTree = "<group>";
+		};
+		A67920FB2D5217E1000BAAD6 /* FormFeeling */ = {
+			isa = PBXGroup;
+			children = (
+				A67921012D521AF7000BAAD6 /* FormFeelingReducer.swift */,
+				A65B4CA22CF0D829009E5B20 /* FormFeelingView.swift */,
+			);
+			path = FormFeeling;
+			sourceTree = "<group>";
+		};
+		A67920FC2D5217EE000BAAD6 /* SuccessSubmitFeelingView */ = {
+			isa = PBXGroup;
+			children = (
+				A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */,
+			);
+			path = SuccessSubmitFeelingView;
+			sourceTree = "<group>";
+		};
+		A6F8DBC52D4A59730082DC0D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A6A71EF52D4A599F008F9977 /* BakoApp.swift */,
+				A6A71EF72D4A59B7008F9977 /* AppReducer.swift */,
+				A6A71EFC2D4A5B84008F9977 /* AppStore.swift */,
+				A6A71EFE2D4A5CA5008F9977 /* AppView.swift */,
+				A6A71F002D4A5F65008F9977 /* Route.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,6 +325,9 @@
 			dependencies = (
 			);
 			name = Bako;
+			packageProductDependencies = (
+				A6A71EFA2D4A5A39008F9977 /* ComposableArchitecture */,
+			);
 			productName = Bako;
 			productReference = A67398252CEBAF6700967654 /* Bako.app */;
 			productType = "com.apple.product-type.application";
@@ -297,6 +356,9 @@
 				Base,
 			);
 			mainGroup = A673981C2CEBAF6700967654;
+			packageReferences = (
+				A6A71EF92D4A5A39008F9977 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = A67398262CEBAF6700967654 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,15 +402,25 @@
 			files = (
 				A67398612CEBB47300967654 /* Text+Extensions.swift in Sources */,
 				A65B4CA12CF0A495009E5B20 /* PositiveEmotions.swift in Sources */,
+				A67920FE2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift in Sources */,
+				A6A71EF62D4A599F008F9977 /* BakoApp.swift in Sources */,
+				A6A71F012D4A5F65008F9977 /* Route.swift in Sources */,
+				A67921002D521AEA000BAAD6 /* SelectFeelingReducer.swift in Sources */,
 				A673983A2CEBB0BB00967654 /* OnboardingView.swift in Sources */,
 				A673982B2CEBAF6700967654 /* ContentView.swift in Sources */,
 				A65B4CA32CF0D829009E5B20 /* FormFeelingView.swift in Sources */,
+				A601B7B32D513E8D001FBF99 /* TrackerReducer.swift in Sources */,
+				A6A71EF82D4A59B7008F9977 /* AppReducer.swift in Sources */,
 				A65B4CA52CF260BA009E5B20 /* SuccessSubmitFeelingView.swift in Sources */,
+				A6A71EFD2D4A5B84008F9977 /* AppStore.swift in Sources */,
 				A65B4C912CEF9A21009E5B20 /* HomeView.swift in Sources */,
-				A67398292CEBAF6700967654 /* BakoApp.swift in Sources */,
+				A6A71EFF2D4A5CA5008F9977 /* AppView.swift in Sources */,
 				A65B4C972CEFC66D009E5B20 /* SelectCategoryFeelingView.swift in Sources */,
 				A65B4C942CEFBE98009E5B20 /* TrackerView.swift in Sources */,
+				A601B7B12D50FC5A001FBF99 /* HomeReducer.swift in Sources */,
 				A65B4C9D2CEFC6A0009E5B20 /* SelectFeelingView.swift in Sources */,
+				A6A71F032D4A8609008F9977 /* OnboardingReducer.swift in Sources */,
+				A67921022D521AF7000BAAD6 /* FormFeelingReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +630,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A6A71EF92D4A5A39008F9977 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.17.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A6A71EFA2D4A5A39008F9977 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6A71EF92D4A5A39008F9977 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A673981D2CEBAF6700967654 /* Project object */;
 }

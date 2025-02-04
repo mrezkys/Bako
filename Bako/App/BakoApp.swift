@@ -12,7 +12,7 @@ struct BakoApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                HomeView()
+                AppView(store: appStore)
             }
         }
     }

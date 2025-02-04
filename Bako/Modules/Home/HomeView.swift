@@ -6,32 +6,31 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct HomeView: View {
-    @State var routeToTrackerView: Bool = false
+    let store: StoreOf<HomeReducer>
+    
     var body: some View {
-        NavigationView{
+        WithViewStore(store, observe: { $0 }) { viewStore in
             ScrollView {
                 VStack {
-                    NavigationLink(
-                        destination: TrackerView(),
-                        isActive: $routeToTrackerView) {}
                     ZStack(alignment: .leading) {
                         Image("home-illustration")
                             .resizable()
                             .scaledToFill()
                             .frame(height: 335)
                         VStack(alignment: .leading, spacing: 16) {
-                            Text("Today might be rough, but you passed it! How you’d feel, Mala?")
+                            Text("Today might be rough, but you passed it! How you'd feel, Mala?")
                                 .plusJakartaFont(.medium, 16)
                                 .lineSpacing(5)
                                 .foregroundColor(.white)
                                 .frame(width: UIScreen.main.bounds.size.width / 2, alignment: .leading)
                             Button {
-                                routeToTrackerView = true
+                                store.send(.todaysMoodButtonTapped)
                             } label: {
                                 HStack(spacing: 8){
-                                    Text("Today’s Mood")
+                                    Text("Today's Mood")
                                         .plusJakartaFont(.medium, 14)
                                     Image(systemName: "arrow.right")
                                 }
@@ -45,7 +44,7 @@ struct HomeView: View {
                         .padding(24)
                     }
                     VStack (alignment: .leading, spacing: 16) {
-                        Text("Today’s Check In")
+                        Text("Today's Check In")
                             .plusJakartaFont(.bold, 16)
                         EmotionTimelineView(emotions: .constant(todayEmotions))
                     }
@@ -56,21 +55,26 @@ struct HomeView: View {
             }.edgesIgnoringSafeArea(.top)
         }
     }
-    
 }
 
 #Preview {
-    HomeView()
+    HomeView(
+        store: Store(
+            initialState: HomeReducer.State()
+        ) {
+            HomeReducer()
+        }
+    )
 }
 
 // Define the TimelineModel
-struct TimelineModel: Identifiable {
+struct TimelineModel: Identifiable, Equatable {
     let id = UUID()
     let title: String
     let description: String
 }
 
-struct EmotionModel: Identifiable {
+struct EmotionModel: Identifiable, Equatable {
     let id = UUID()
     var date: Date?
     let feel: String
@@ -154,6 +158,7 @@ struct EmotionTimelineView: View {
             }
             Spacer()
         }
+        .navigationBarBackButtonHidden()
     }
 }
 
