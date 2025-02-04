@@ -6,6 +6,8 @@ struct FormFeelingReducer {
         var journal: String = ""
         var selectedActivity: String = "Working"
         var selectedPlace: String = "Outside"
+        let activities: [String] = ["Working", "Driving", "Gym", "Cleaning", "Eating"]
+        let places: [String] = ["Outside", "Office", "Commuting", "Home"]
     }
     
     enum Action: Equatable {

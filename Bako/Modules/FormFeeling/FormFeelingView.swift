@@ -10,8 +10,6 @@ import ComposableArchitecture
 
 struct FormFeelingView: View {
     let store: StoreOf<FormFeelingReducer>
-    let activities: [String] = ["Working", "Driving", "Gym", "Cleaning", "Eating"]
-    let places: [String] = ["Outside", "Office", "Commuting", "Home"]
     
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
@@ -62,7 +60,7 @@ struct FormFeelingView: View {
                                 Text("Activities")
                                     .plusJakartaFont(.bold, 16)
                                 ChipSelector(
-                                    items: activities,
+                                    items: viewStore.activities,
                                     displayText: { $0 },
                                     onTapAdd: {
                                         print("Add tapped")
@@ -81,7 +79,7 @@ struct FormFeelingView: View {
                                 Text("Where")
                                     .plusJakartaFont(.bold, 16)
                                 ChipSelector(
-                                    items: places,
+                                    items: viewStore.places,
                                     displayText: { $0 },
                                     onTapAdd: {
                                         print("Add tapped")
