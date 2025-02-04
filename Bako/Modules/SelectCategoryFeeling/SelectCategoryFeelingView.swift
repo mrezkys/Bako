@@ -29,6 +29,7 @@ struct SelectCategoryFeelingView: View {
                             .cornerRadius(100)
                             .scaleEffect(viewStore.selectedEmotionCategory == .positive ? 1.2 : 1)
                             .opacity(viewStore.selectedEmotionCategory == .negative ? 0.5 : 1)
+                            .animation(.spring(response: 0.3, dampingFraction: 0.6), value: viewStore.selectedEmotionCategory)
                     }
                     Button {
                         viewStore.send(.selectEmotionCategory(.negative))
@@ -40,6 +41,7 @@ struct SelectCategoryFeelingView: View {
                             .cornerRadius(100)
                             .scaleEffect(viewStore.selectedEmotionCategory == .negative ? 1.2 : 1)
                             .opacity(viewStore.selectedEmotionCategory == .positive ? 0.5 : 1)
+                            .animation(.spring(response: 0.3, dampingFraction: 0.6), value: viewStore.selectedEmotionCategory)
                     }
                 }
                 Spacer()
