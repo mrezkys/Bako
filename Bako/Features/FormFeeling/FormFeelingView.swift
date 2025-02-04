@@ -142,7 +142,8 @@ struct FormFeelingView: View {
                             .plusJakartaFont(.medium, 16)
                             .padding(.vertical, 16)
                             .frame(maxWidth: .infinity)
-                            .background(viewStore.isFormValid ? Color.primaryBlue : Color.grey)
+                            .background(Color.primaryBlue)
+                            .opacity(viewStore.isFormValid ? 1 : 0.6)
                             .foregroundColor(.white)
                             .cornerRadius(48)
                     }
@@ -151,9 +152,9 @@ struct FormFeelingView: View {
                     .padding(.vertical, 16)
                     .background(.white)
                     .clipped()
+                    .shadow(color: .grey.opacity(0.1), radius: 10, x: 0, y: -10)
                 }
                 .frame(maxWidth: .infinity)
-                .shadow(color: .grey.opacity(0.1), radius: 10, x: 0, y: -10)
             }
             .onTapGesture {
                 isTextFieldFocused = false  // Dismiss keyboard when tapping outside
