@@ -8,6 +8,12 @@ struct FormFeelingReducer {
         var selectedPlace: String = "Outside"
         let activities: [String] = ["Working", "Driving", "Gym", "Cleaning", "Eating"]
         let places: [String] = ["Outside", "Office", "Commuting", "Home"]
+        var selectedEmotion: EmotionModel?
+        
+        init(selectedEmotion: EmotionModel? = nil) {
+            self.selectedEmotion = selectedEmotion
+        }
+        
     }
     
     enum Action: Equatable {
