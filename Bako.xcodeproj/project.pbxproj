@@ -17,7 +17,6 @@
 		A65B4CA32CF0D829009E5B20 /* FormFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4CA22CF0D829009E5B20 /* FormFeelingView.swift */; };
 		A65B4CA52CF260BA009E5B20 /* SuccessSubmitFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */; };
 		A667243D2D5255A1004CC431 /* NegativeEmotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A667243C2D5255A1004CC431 /* NegativeEmotions.swift */; };
-		A673982B2CEBAF6700967654 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673982A2CEBAF6700967654 /* ContentView.swift */; };
 		A673982D2CEBAF6800967654 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A673982C2CEBAF6800967654 /* Images.xcassets */; };
 		A67398302CEBAF6800967654 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A673982F2CEBAF6800967654 /* Preview Assets.xcassets */; };
 		A673983A2CEBB0BB00967654 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67398392CEBB0BB00967654 /* OnboardingView.swift */; };
@@ -61,7 +60,6 @@
 		A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSubmitFeelingView.swift; sourceTree = "<group>"; };
 		A667243C2D5255A1004CC431 /* NegativeEmotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeEmotions.swift; sourceTree = "<group>"; };
 		A67398252CEBAF6700967654 /* Bako.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bako.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A673982A2CEBAF6700967654 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A673982C2CEBAF6800967654 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A673982F2CEBAF6800967654 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A67398392CEBB0BB00967654 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -132,12 +130,12 @@
 			path = SelectFeeling;
 			sourceTree = "<group>";
 		};
-		A65B4C9E2CF0A485009E5B20 /* Constant */ = {
+		A65B4C9E2CF0A485009E5B20 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				A65B4C9F2CF0A48A009E5B20 /* Mock */,
 			);
-			path = Constant;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		A65B4C9F2CF0A48A009E5B20 /* Mock */ = {
@@ -147,6 +145,30 @@
 				A667243C2D5255A1004CC431 /* NegativeEmotions.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		A667243E2D528DBD004CC431 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A66724402D528DD7004CC431 /* Models */,
+				A673985F2CEBB46500967654 /* Extensions */,
+				A667243F2D528DC6004CC431 /* Components */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A667243F2D528DC6004CC431 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A66724402D528DD7004CC431 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A673981C2CEBAF6700967654 = {
@@ -171,8 +193,7 @@
 				A673985E2CEBB35B00967654 /* Info.plist */,
 				A6F8DBC52D4A59730082DC0D /* App */,
 				A673983B2CEBB2A300967654 /* Core */,
-				A67398362CEBB0A100967654 /* Modules */,
-				A673982A2CEBAF6700967654 /* ContentView.swift */,
+				A67398362CEBB0A100967654 /* Features */,
 				A673982E2CEBAF6800967654 /* Preview Content */,
 			);
 			path = Bako;
@@ -186,10 +207,10 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		A67398362CEBB0A100967654 /* Modules */ = {
+		A67398362CEBB0A100967654 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				A67920FC2D5217EE000BAAD6 /* SuccessSubmitFeelingView */,
+				A67920FC2D5217EE000BAAD6 /* SuccessSubmitFeeling */,
 				A67920FB2D5217E1000BAAD6 /* FormFeeling */,
 				A67920FA2D5217C6000BAAD6 /* SelectCategoryFeeling */,
 				A65B4C952CEFC649009E5B20 /* SelectFeeling */,
@@ -197,7 +218,7 @@
 				A65B4C8F2CEF9A16009E5B20 /* Home */,
 				A67398372CEBB0A500967654 /* Onboarding */,
 			);
-			path = Modules;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		A67398372CEBB0A500967654 /* Onboarding */ = {
@@ -212,29 +233,20 @@
 		A673983B2CEBB2A300967654 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A65B4C9E2CF0A485009E5B20 /* Constant */,
-				A673985F2CEBB46500967654 /* Extensions */,
-				A673983C2CEBB2A700967654 /* Assets */,
+				A667243E2D528DBD004CC431 /* Common */,
+				A65B4C9E2CF0A485009E5B20 /* Constants */,
+				A673983C2CEBB2A700967654 /* Design */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		A673983C2CEBB2A700967654 /* Assets */ = {
+		A673983C2CEBB2A700967654 /* Design */ = {
 			isa = PBXGroup;
 			children = (
-				A673983F2CEBB2BA00967654 /* Colors */,
+				A673983F2CEBB2BA00967654 /* Assets */,
 				A673983E2CEBB2B600967654 /* Fonts */,
-				A673983D2CEBB2AE00967654 /* Images */,
 			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		A673983D2CEBB2AE00967654 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				A673982C2CEBAF6800967654 /* Images.xcassets */,
-			);
-			path = Images;
+			path = Design;
 			sourceTree = "<group>";
 		};
 		A673983E2CEBB2B600967654 /* Fonts */ = {
@@ -258,12 +270,13 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		A673983F2CEBB2BA00967654 /* Colors */ = {
+		A673983F2CEBB2BA00967654 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A673982C2CEBAF6800967654 /* Images.xcassets */,
 				A67398402CEBB2C900967654 /* Colors.xcassets */,
 			);
-			path = Colors;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		A673985F2CEBB46500967654 /* Extensions */ = {
@@ -292,12 +305,12 @@
 			path = FormFeeling;
 			sourceTree = "<group>";
 		};
-		A67920FC2D5217EE000BAAD6 /* SuccessSubmitFeelingView */ = {
+		A67920FC2D5217EE000BAAD6 /* SuccessSubmitFeeling */ = {
 			isa = PBXGroup;
 			children = (
 				A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */,
 			);
-			path = SuccessSubmitFeelingView;
+			path = SuccessSubmitFeeling;
 			sourceTree = "<group>";
 		};
 		A6F8DBC52D4A59730082DC0D /* App */ = {
@@ -411,7 +424,6 @@
 				A6A71F012D4A5F65008F9977 /* Route.swift in Sources */,
 				A67921002D521AEA000BAAD6 /* SelectFeelingReducer.swift in Sources */,
 				A673983A2CEBB0BB00967654 /* OnboardingView.swift in Sources */,
-				A673982B2CEBAF6700967654 /* ContentView.swift in Sources */,
 				A65B4CA32CF0D829009E5B20 /* FormFeelingView.swift in Sources */,
 				A601B7B32D513E8D001FBF99 /* TrackerReducer.swift in Sources */,
 				A6A71EF82D4A59B7008F9977 /* AppReducer.swift in Sources */,
