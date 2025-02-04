@@ -16,6 +16,7 @@
 		A65B4CA12CF0A495009E5B20 /* PositiveEmotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4CA02CF0A495009E5B20 /* PositiveEmotions.swift */; };
 		A65B4CA32CF0D829009E5B20 /* FormFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4CA22CF0D829009E5B20 /* FormFeelingView.swift */; };
 		A65B4CA52CF260BA009E5B20 /* SuccessSubmitFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */; };
+		A667243D2D5255A1004CC431 /* NegativeEmotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A667243C2D5255A1004CC431 /* NegativeEmotions.swift */; };
 		A673982B2CEBAF6700967654 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673982A2CEBAF6700967654 /* ContentView.swift */; };
 		A673982D2CEBAF6800967654 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A673982C2CEBAF6800967654 /* Images.xcassets */; };
 		A67398302CEBAF6800967654 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A673982F2CEBAF6800967654 /* Preview Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		A65B4CA02CF0A495009E5B20 /* PositiveEmotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveEmotions.swift; sourceTree = "<group>"; };
 		A65B4CA22CF0D829009E5B20 /* FormFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFeelingView.swift; sourceTree = "<group>"; };
 		A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSubmitFeelingView.swift; sourceTree = "<group>"; };
+		A667243C2D5255A1004CC431 /* NegativeEmotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeEmotions.swift; sourceTree = "<group>"; };
 		A67398252CEBAF6700967654 /* Bako.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bako.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A673982A2CEBAF6700967654 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A673982C2CEBAF6800967654 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				A65B4CA02CF0A495009E5B20 /* PositiveEmotions.swift */,
+				A667243C2D5255A1004CC431 /* NegativeEmotions.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A667243D2D5255A1004CC431 /* NegativeEmotions.swift in Sources */,
 				A67398612CEBB47300967654 /* Text+Extensions.swift in Sources */,
 				A65B4CA12CF0A495009E5B20 /* PositiveEmotions.swift in Sources */,
 				A67920FE2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift in Sources */,
