@@ -6,21 +6,18 @@ struct EmotionCirclesView: View {
     let store: StoreOf<SelectFeelingReducer>
 
     func getScaleFactorForIndex(index: Int, viewStore: ViewStore<SelectFeelingReducer.State, SelectFeelingReducer.Action>) -> Double {
-        let normalScale = 1.0       // Default size
-        let centerScale = 1.1       // Slightly larger when near the center
-        let selectedScale = 1.15     // Larger when selected
+        let normalScale = 1.0
+        let centerScale = 1.15    // Increased from 1.1 for more noticeable effect
+        let selectedScale = 1.25   // Increased from 1.15 for more emphasis
 
-        // Check if the circle is selected 
         if index == viewStore.selectedEmotionIndex {
             return selectedScale
         }
 
-        // Check if the circle is near the center
         if index == viewStore.activeCircleIndex {
             return centerScale
         }
 
-        // Default case
         return normalScale
     }
 
@@ -47,24 +44,23 @@ struct EmotionCirclesView: View {
                                 x: originalPositions[index].x + viewStore.currentOffset.width,
                                 y: originalPositions[index].y + viewStore.currentOffset.height
                             ))
-                            .animation(.easeInOut(duration: 0.3), value: viewStore.activeCircleIndex)
+                            .animation(.spring(response: 0.4, dampingFraction: 0.7), value: viewStore.activeCircleIndex)
+                            .animation(.spring(response: 0.4, dampingFraction: 0.7), value: viewStore.selectedEmotionIndex)
+                            .animation(.spring(response: 0.4, dampingFraction: 0.7), value: viewStore.currentOffset)
                             .onTapGesture {
                                 viewStore.send(.selectEmotion(index))
                                 
-                                // Calculate offset needed to center the tapped circle
                                 let selectedPosition = originalPositions[index]
                                 let offsetToCenter = CGSize(
                                     width: size.width/2 - selectedPosition.x,
                                     height: size.height/2 - selectedPosition.y
                                 )
                                 
-                                // Apply the offset with animation
-                                withAnimation(.easeInOut(duration: 0.3)) {
+                                withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) {
                                     viewStore.send(.updateOffset(offsetToCenter))
                                     viewStore.send(.setLastOffset(offsetToCenter))
                                 }
                                 
-                                // Update active circle
                                 viewStore.send(.updateActiveCircle(index))
                             }
                     }
@@ -74,17 +70,17 @@ struct EmotionCirclesView: View {
                 .gesture(
                     DragGesture()
                         .onChanged { value in
-                            // Calculate new offset
                             let newOffset = CGSize(
                                 width: viewStore.lastOffset.width + value.translation.width,
                                 height: viewStore.lastOffset.height + value.translation.height
                             )
 
-                            // Limit the drag
                             let limitedOffset = limitDrag(newOffset, in: size, positions: originalPositions)
-                            viewStore.send(.updateOffset(limitedOffset))
+                            
+                            withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                                viewStore.send(.updateOffset(limitedOffset))
+                            }
 
-                            // Update the active circle index based on the adjusted positions
                             let adjustedPositions = originalPositions.map { position in
                                 CGPoint(
                                     x: position.x + limitedOffset.width,
