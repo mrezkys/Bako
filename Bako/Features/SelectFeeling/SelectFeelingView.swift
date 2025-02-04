@@ -7,8 +7,8 @@ struct EmotionCirclesView: View {
 
     func getScaleFactorForIndex(index: Int, viewStore: ViewStore<SelectFeelingReducer.State, SelectFeelingReducer.Action>) -> Double {
         let normalScale = 1.0
-        let centerScale = 1.15    // Increased from 1.1 for more noticeable effect
-        let selectedScale = 1.25   // Increased from 1.15 for more emphasis
+        let centerScale = 1.05 
+        let selectedScale = 1.10
 
         if index == viewStore.selectedEmotionIndex {
             return selectedScale
