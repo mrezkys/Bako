@@ -50,6 +50,22 @@ struct EmotionCirclesView: View {
                             .animation(.easeInOut(duration: 0.3), value: viewStore.activeCircleIndex)
                             .onTapGesture {
                                 viewStore.send(.selectEmotion(index))
+                                
+                                // Calculate offset needed to center the tapped circle
+                                let selectedPosition = originalPositions[index]
+                                let offsetToCenter = CGSize(
+                                    width: size.width/2 - selectedPosition.x,
+                                    height: size.height/2 - selectedPosition.y
+                                )
+                                
+                                // Apply the offset with animation
+                                withAnimation(.easeInOut(duration: 0.3)) {
+                                    viewStore.send(.updateOffset(offsetToCenter))
+                                    viewStore.send(.setLastOffset(offsetToCenter))
+                                }
+                                
+                                // Update active circle
+                                viewStore.send(.updateActiveCircle(index))
                             }
                     }
                 }
@@ -166,7 +182,7 @@ struct SelectFeelingView: View {
 
                 // Emotion Circles Area
                 EmotionCirclesView(
-                    emotions: positiveEmotions,
+                    emotions: viewStore.emotions,
                     store: store
                 )
                 .frame(maxHeight: .infinity)

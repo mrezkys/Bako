@@ -78,7 +78,9 @@ struct AppReducer {
                 return .none
                 
             case .selectCategoryFeeling(.delegate(.routeToSelectFeeling)):
-                state.selectFeeling = SelectFeelingReducer.State()
+                let emotions = state.selectCategoryFeeling?.selectedEmotionCategory == .positive ? 
+                    positiveEmotions : negativeEmotions
+                state.selectFeeling = SelectFeelingReducer.State(emotions: emotions)
                 state.path.append(.selectFeeling)
                 return .none
                 
@@ -95,9 +97,6 @@ struct AppReducer {
                 return .none
                 
             case .formFeeling:
-                return .none
-                
-            case .selectCategoryFeeling(.selectEmotionCategory(let category)):
                 return .none
                 
             case .selectCategoryFeeling:

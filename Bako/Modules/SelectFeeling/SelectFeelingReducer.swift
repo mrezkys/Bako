@@ -8,7 +8,12 @@ struct SelectFeelingReducer {
         var activeCircleIndex: Int?
         var currentOffset: CGSize = .zero
         var lastOffset: CGSize = .zero
+        var emotions: [EmotionModel]
         var formFeeling: FormFeelingReducer.State?
+        
+        init(emotions: [EmotionModel]) {
+            self.emotions = emotions
+        }
     }
     
     enum Action: Equatable {
