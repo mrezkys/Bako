@@ -7,9 +7,11 @@
 
 import SwiftUI
 import ComposableArchitecture
+import SwiftData
 
 struct HomeView: View {
     let store: StoreOf<HomeReducer>
+    @Query private var emotionList: [EmotionModel]
     
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
@@ -46,7 +48,7 @@ struct HomeView: View {
                     VStack (alignment: .leading, spacing: 16) {
                         Text("Today's Check In")
                             .plusJakartaFont(.bold, 16)
-                        EmotionTimelineView(emotions: .constant(todayEmotions))
+                        EmotionTimelineView(emotions: .constant(emotionList))
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(24)
