@@ -67,62 +67,6 @@ struct HomeView: View {
     )
 }
 
-// Define the TimelineModel
-struct TimelineModel: Identifiable, Equatable {
-    let id = UUID()
-    let title: String
-    let description: String
-}
-
-struct EmotionModel: Identifiable, Equatable {
-    let id = UUID()
-    var date: Date?
-    let feel: String
-    var journal: String = ""
-    var activities: String = ""
-    var place: String = ""
-    let iconType: EmotionIconType
-    let category: EmotionCategory
-}
-
-enum EmotionIconType: String {
-    case affectionate
-    case cool
-    case exhausted
-    case smile
-    
-    var image: String {
-        switch self {
-        case .affectionate:
-            return "affectionate-emotion-icon"
-        case .cool:
-            return "cool-emotion-icon"
-        case .exhausted:
-            return "exhausted-emotion-icon"
-        case .smile:
-            return "smile-emotion-icon"
-        }
-    }
-    
-    var color: Color {
-        switch self {
-        case .affectionate:
-                .black
-        case .cool:
-                .black
-        case .exhausted:
-            Color(.greenEmotion)
-        case .smile:
-            Color(.redEmotion)
-        }
-    }
-}
-
-enum EmotionCategory {
-    case positive
-    case negative
-}
-
 struct EmotionTimelineView: View {
     @Binding var emotions: [EmotionModel]
     var body: some View {

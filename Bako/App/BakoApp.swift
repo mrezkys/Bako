@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct BakoApp: App {
@@ -15,5 +16,6 @@ struct BakoApp: App {
                 AppView(store: appStore)
             }
         }
+        .modelContainer(for: EmotionModel.self)
     }
 }
