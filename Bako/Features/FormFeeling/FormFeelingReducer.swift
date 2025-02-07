@@ -1,5 +1,6 @@
 import ComposableArchitecture
 import Foundation
+import SwiftData
 
 @Reducer
 struct FormFeelingReducer {
@@ -26,9 +27,11 @@ struct FormFeelingReducer {
         var isFormValid: Bool = false
         var showError: Bool = false
         var currentDate: Date = Date()
+        var modelContext: ModelContext?
         
-        init(selectedEmotion: EmotionModel? = nil) {
+        init(selectedEmotion: EmotionModel? = nil, modelContext: ModelContext? = nil) {
             self.selectedEmotion = selectedEmotion
+            self.modelContext = modelContext
             self.validateForm()
         }
         
@@ -51,6 +54,8 @@ struct FormFeelingReducer {
         case addCustomPlace(String)
         case removeCustomActivity(String)
         case removeCustomPlace(String)
+        case saveEmotion
+        case emotionSaved
         
         enum Delegate: Equatable {
             case routeToSuccessSubmit
@@ -90,8 +95,7 @@ struct FormFeelingReducer {
                 
             case .saveButtonTapped:
                 if state.isFormValid {
-                    // Here you would typically save the form data
-                    return .send(.delegate(.routeToSuccessSubmit))
+                    return .send(.saveEmotion)
                 } else {
                     state.showError = true
                     return .send(.setShowError(true))
@@ -150,6 +154,31 @@ struct FormFeelingReducer {
                     }
                 }
                 return .none
+                
+            case .saveEmotion:
+                guard let modelContext = state.modelContext,
+                      var emotion = state.selectedEmotion else {
+                    return .none
+                }
+                
+                // Update emotion with form data
+                emotion.journal = state.journal
+                emotion.activities = state.selectedActivity
+                emotion.place = state.selectedPlace
+                emotion.date = state.currentDate
+                
+                // Save to SwiftData
+                modelContext.insert(emotion)
+                do {
+                    try modelContext.save()
+                    return .send(.emotionSaved)
+                } catch {
+                    print("Failed to save emotion: \(error)")
+                    return .none
+                }
+                
+            case .emotionSaved:
+                return .send(.delegate(.routeToSuccessSubmit))
             }
         }
     }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import SwiftData
 
 @Reducer
 struct AppReducer {
@@ -18,6 +19,8 @@ struct AppReducer {
         var selectCategoryFeeling: SelectCategoryFeelingReducer.State?
         var selectFeeling: SelectFeelingReducer.State?
         var formFeeling: FormFeelingReducer.State?
+        var modelContext: ModelContext?
+        var successSubmit: SuccessSubmitFeelingReducer.State?
         
         init(
             path: StackState<Route> = StackState<Route>(),
@@ -26,7 +29,8 @@ struct AppReducer {
             onboarding: OnboardingReducer.State = OnboardingReducer.State(),
             selectCategoryFeeling: SelectCategoryFeelingReducer.State? = nil,
             selectFeeling: SelectFeelingReducer.State? = nil,
-            formFeeling: FormFeelingReducer.State? = nil
+            formFeeling: FormFeelingReducer.State? = nil,
+            modelContext: ModelContext? = nil
         ) {
             self.path = path
             self.home = home
@@ -35,6 +39,7 @@ struct AppReducer {
             self.selectCategoryFeeling = selectCategoryFeeling
             self.selectFeeling = selectFeeling
             self.formFeeling = formFeeling
+            self.modelContext = modelContext
         }
     }
     
@@ -46,6 +51,7 @@ struct AppReducer {
         case selectCategoryFeeling(SelectCategoryFeelingReducer.Action)
         case selectFeeling(SelectFeelingReducer.Action)
         case formFeeling(FormFeelingReducer.Action)
+        case successSubmit(SuccessSubmitFeelingReducer.Action)
     }
     
     var body: some ReducerOf<Self> {
@@ -87,7 +93,10 @@ struct AppReducer {
             case .selectFeeling(.delegate(.routeToFormFeeling)):
                 if let selectedIndex = state.selectFeeling?.selectedEmotionIndex,
                    let selectedEmotion = state.selectFeeling?.emotions[selectedIndex] {
-                    state.formFeeling = FormFeelingReducer.State(selectedEmotion: selectedEmotion)
+                    state.formFeeling = FormFeelingReducer.State(
+                        selectedEmotion: selectedEmotion,
+                        modelContext: state.modelContext
+                    )
                     state.path.append(.formFeeling)
                 }
                 return .none
@@ -96,6 +105,7 @@ struct AppReducer {
                 return .none
                 
             case .formFeeling(.delegate(.routeToSuccessSubmit)):
+                state.successSubmit = SuccessSubmitFeelingReducer.State()
                 state.path.append(.successSubmit)
                 return .none
                 
@@ -103,6 +113,12 @@ struct AppReducer {
                 return .none
                 
             case .selectCategoryFeeling:
+                return .none
+                
+            case .successSubmit(.delegate(.backToHome)):
+                state.path.removeAll()
+                return .none
+            case .successSubmit:
                 return .none
             }
         }
@@ -126,6 +142,9 @@ struct AppReducer {
         }
         .ifLet(\.formFeeling, action: \.formFeeling) {
             FormFeelingReducer()
+        }
+        .ifLet(\.successSubmit, action: \.successSubmit) {
+            SuccessSubmitFeelingReducer()
         }
     }
 }

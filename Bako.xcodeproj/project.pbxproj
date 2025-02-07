@@ -47,6 +47,7 @@
 		A6A71F012D4A5F65008F9977 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71F002D4A5F65008F9977 /* Route.swift */; };
 		A6A71F032D4A8609008F9977 /* OnboardingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71F022D4A8609008F9977 /* OnboardingReducer.swift */; };
 		A6B8574C2D566DF00004DB64 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8574B2D566DED0004DB64 /* Model.swift */; };
+		A6B8574E2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8574D2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		A6A71F002D4A5F65008F9977 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		A6A71F022D4A8609008F9977 /* OnboardingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingReducer.swift; sourceTree = "<group>"; };
 		A6B8574B2D566DED0004DB64 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A6B8574D2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSubmitFeelingReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 		A67920FC2D5217EE000BAAD6 /* SuccessSubmitFeeling */ = {
 			isa = PBXGroup;
 			children = (
+				A6B8574D2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift */,
 				A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */,
 			);
 			path = SuccessSubmitFeeling;
@@ -419,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6B8574E2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift in Sources */,
 				A667243D2D5255A1004CC431 /* NegativeEmotions.swift in Sources */,
 				A67398612CEBB47300967654 /* Text+Extensions.swift in Sources */,
 				A65B4CA12CF0A495009E5B20 /* PositiveEmotions.swift in Sources */,

@@ -53,7 +53,12 @@ struct AppView: View {
                     )
                 )
             case .successSubmit:
-                SuccessSubmitFeelingView()
+                SuccessSubmitFeelingView(
+                    store: store.scope(
+                        state: \.successSubmit!,
+                        action: \.successSubmit
+                    )
+                )
             case .tracker:
                 TrackerView(
                     store: store.scope(
