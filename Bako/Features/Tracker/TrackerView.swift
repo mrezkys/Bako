@@ -10,6 +10,7 @@ import ComposableArchitecture
 
 struct TrackerView: View {
     let store: StoreOf<TrackerReducer>
+
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             ScrollView{
@@ -52,11 +53,17 @@ struct TrackerView: View {
                     }
                     Spacer().frame(height: 36)
                     VStack (alignment: .leading, spacing: 24) {
-                        Text("Today’s Check In")
-                            .plusJakartaFont(.bold, 16)
+                        HStack {
+                            Text(viewStore.checkInTitle)
+                                .plusJakartaFont(.bold, 16)
+                            Spacer()
+                            Text(viewStore.formattedDate)
+                                .plusJakartaFont(.regular, 12)
+                                .opacity(0.4)
+                        }
                         HStack(spacing: 16) {
                             HStack (spacing: 24) {
-                                Text("1")
+                                Text("0")
                                     .plusJakartaFont(.bold, 18)
                                 Text("Positive\nFeelings")
                                     .plusJakartaFont(.medium, 14)
@@ -68,7 +75,7 @@ struct TrackerView: View {
                             .cornerRadius(24)
                             
                             HStack (spacing: 24) {
-                                Text("1")
+                                Text("0")
                                     .plusJakartaFont(.bold, 18)
                                 Text("Negative\nFeelings")
                                     .plusJakartaFont(.medium, 14)
@@ -91,6 +98,45 @@ struct TrackerView: View {
                 .padding(.vertical, 16)
             }
             .navigationTitle("Mood Journey")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        viewStore.send(.toggleDatePicker)
+                    } label: {
+                        Image(systemName: "calendar")
+                            .foregroundColor(.primary)
+                    }
+                }
+            }
+            .sheet(
+                isPresented: viewStore.binding(
+                    get: \.isDatePickerPresented,
+                    send: .closeDatePicker
+                )
+            ) {
+                NavigationView {
+                    DatePicker(
+                        "Select Date",
+                        selection: viewStore.binding(
+                            get: \.selectedDate,
+                            send: { .selectDate($0) }
+                        ),
+                        displayedComponents: .date
+                    )
+                    .datePickerStyle(.graphical)
+                    .padding()
+                    .navigationTitle("Select Date")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button("Done") {
+                                viewStore.send(.closeDatePicker)
+                            }
+                        }
+                    }
+                }
+                .presentationDetents([.medium])
+            }
         }
     }
 }
