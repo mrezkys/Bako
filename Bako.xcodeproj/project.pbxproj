@@ -48,6 +48,8 @@
 		A6A71F032D4A8609008F9977 /* OnboardingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71F022D4A8609008F9977 /* OnboardingReducer.swift */; };
 		A6B8574C2D566DF00004DB64 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8574B2D566DED0004DB64 /* Model.swift */; };
 		A6B8574E2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8574D2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift */; };
+		A6B857512D57B6A50004DB64 /* DetailFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B857502D57B69F0004DB64 /* DetailFeelingReducer.swift */; };
+		A6B857532D57B6AF0004DB64 /* DetailFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B857522D57B6AF0004DB64 /* DetailFeelingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,8 @@
 		A6A71F022D4A8609008F9977 /* OnboardingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingReducer.swift; sourceTree = "<group>"; };
 		A6B8574B2D566DED0004DB64 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A6B8574D2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSubmitFeelingReducer.swift; sourceTree = "<group>"; };
+		A6B857502D57B69F0004DB64 /* DetailFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFeelingReducer.swift; sourceTree = "<group>"; };
+		A6B857522D57B6AF0004DB64 /* DetailFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFeelingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,7 @@
 		A67398362CEBB0A100967654 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A6B8574F2D57B68E0004DB64 /* DetailFeeling */,
 				A67920FC2D5217EE000BAAD6 /* SuccessSubmitFeeling */,
 				A67920FB2D5217E1000BAAD6 /* FormFeeling */,
 				A67920FA2D5217C6000BAAD6 /* SelectCategoryFeeling */,
@@ -317,6 +322,15 @@
 				A65B4CA42CF260BA009E5B20 /* SuccessSubmitFeelingView.swift */,
 			);
 			path = SuccessSubmitFeeling;
+			sourceTree = "<group>";
+		};
+		A6B8574F2D57B68E0004DB64 /* DetailFeeling */ = {
+			isa = PBXGroup;
+			children = (
+				A6B857502D57B69F0004DB64 /* DetailFeelingReducer.swift */,
+				A6B857522D57B6AF0004DB64 /* DetailFeelingView.swift */,
+			);
+			path = DetailFeeling;
 			sourceTree = "<group>";
 		};
 		A6F8DBC52D4A59730082DC0D /* App */ = {
@@ -429,6 +443,7 @@
 				A67920FE2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift in Sources */,
 				A6A71EF62D4A599F008F9977 /* BakoApp.swift in Sources */,
 				A6A71F012D4A5F65008F9977 /* Route.swift in Sources */,
+				A6B857532D57B6AF0004DB64 /* DetailFeelingView.swift in Sources */,
 				A67921002D521AEA000BAAD6 /* SelectFeelingReducer.swift in Sources */,
 				A673983A2CEBB0BB00967654 /* OnboardingView.swift in Sources */,
 				A65B4CA32CF0D829009E5B20 /* FormFeelingView.swift in Sources */,
@@ -442,6 +457,7 @@
 				A65B4C942CEFBE98009E5B20 /* TrackerView.swift in Sources */,
 				A601B7B12D50FC5A001FBF99 /* HomeReducer.swift in Sources */,
 				A65B4C9D2CEFC6A0009E5B20 /* SelectFeelingView.swift in Sources */,
+				A6B857512D57B6A50004DB64 /* DetailFeelingReducer.swift in Sources */,
 				A6B8574C2D566DF00004DB64 /* Model.swift in Sources */,
 				A6A71F032D4A8609008F9977 /* OnboardingReducer.swift in Sources */,
 				A67921022D521AF7000BAAD6 /* FormFeelingReducer.swift in Sources */,

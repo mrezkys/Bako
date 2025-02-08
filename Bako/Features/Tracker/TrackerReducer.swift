@@ -42,15 +42,20 @@ struct TrackerReducer {
         case toggleDatePicker
         case closeDatePicker
         case checkInButtonTapped
+        case emotionCardTapped(EmotionModel)
         case delegate(Delegate)
         enum Delegate: Equatable {
             case routeToSelectCategoryFeeling
+            case routeToDetailFeeling(EmotionModel)
         }
     }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
+            case .emotionCardTapped(let emotion):
+                return .send(.delegate(.routeToDetailFeeling(emotion)))
+
             case .toggleDatePicker:
                 state.isDatePickerPresented.toggle()
                 return .none

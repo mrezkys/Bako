@@ -15,5 +15,5 @@ enum Route: Equatable, Hashable {
     case formFeeling
     case successSubmit
     case tracker
-    case details(String)  // Example: navigating with an ID
+    case details(EmotionModel)
 }

@@ -21,6 +21,7 @@ struct AppReducer {
         var formFeeling: FormFeelingReducer.State?
         var modelContext: ModelContext?
         var successSubmit: SuccessSubmitFeelingReducer.State?
+        var detailFeeling: DetailFeelingReducer.State?
         
         init(
             path: StackState<Route> = StackState<Route>(),
@@ -30,6 +31,7 @@ struct AppReducer {
             selectCategoryFeeling: SelectCategoryFeelingReducer.State? = nil,
             selectFeeling: SelectFeelingReducer.State? = nil,
             formFeeling: FormFeelingReducer.State? = nil,
+            detailFeeling: DetailFeelingReducer.State? = nil,
             modelContext: ModelContext? = nil
         ) {
             self.path = path
@@ -39,6 +41,7 @@ struct AppReducer {
             self.selectCategoryFeeling = selectCategoryFeeling
             self.selectFeeling = selectFeeling
             self.formFeeling = formFeeling
+            self.detailFeeling = detailFeeling
             self.modelContext = modelContext
         }
     }
@@ -52,6 +55,7 @@ struct AppReducer {
         case selectFeeling(SelectFeelingReducer.Action)
         case formFeeling(FormFeelingReducer.Action)
         case successSubmit(SuccessSubmitFeelingReducer.Action)
+        case detailFeeling(DetailFeelingReducer.Action)
     }
     
     var body: some ReducerOf<Self> {
@@ -71,6 +75,11 @@ struct AppReducer {
             case .tracker(.delegate(.routeToSelectCategoryFeeling)):
                 state.selectCategoryFeeling = SelectCategoryFeelingReducer.State()
                 state.path.append(.selectCategoryFeeling)
+                return .none
+                
+            case .tracker(.delegate(.routeToDetailFeeling(let emotion))):
+                state.detailFeeling = DetailFeelingReducer.State(emotion: emotion)
+                state.path.append(.details(emotion))
                 return .none
                 
             case .tracker:
@@ -118,7 +127,11 @@ struct AppReducer {
             case .successSubmit(.delegate(.backToHome)):
                 state.path.removeAll()
                 return .none
+
             case .successSubmit:
+                return .none
+                
+            case .detailFeeling:
                 return .none
             }
         }
@@ -145,6 +158,9 @@ struct AppReducer {
         }
         .ifLet(\.successSubmit, action: \.successSubmit) {
             SuccessSubmitFeelingReducer()
+        }
+        .ifLet(\.detailFeeling, action: \.detailFeeling) {
+            DetailFeelingReducer()
         }
     }
 }

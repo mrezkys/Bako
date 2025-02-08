@@ -95,6 +95,9 @@ struct TrackerView: View {
                         VStack (alignment: .leading, spacing: 16) {
                             ForEach(filteredEmotions) { emotion in
                                 EmotionCardView(emotion: emotion)
+                                    .onTapGesture {
+                                        viewStore.send(.emotionCardTapped(emotion))
+                                    }
                             }
                         }
                     }

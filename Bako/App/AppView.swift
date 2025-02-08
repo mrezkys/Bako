@@ -67,7 +67,12 @@ struct AppView: View {
                     )
                 )
             case .details(let id):
-                Text("📄 Details View: \(id)")
+                DetailFeelingView(
+                    store: store.scope(
+                        state: \.detailFeeling!,
+                        action: \.detailFeeling
+                    )
+                )
             default:
                 EmptyView()
             }
