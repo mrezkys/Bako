@@ -111,22 +111,35 @@ struct EmotionTimelineView: View {
 
 struct EmotionCardView: View {
     var emotion: EmotionModel
+    
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE, MMM d"
+        return formatter
+    }()
+    
+    private let timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm a"
+        return formatter
+    }()
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 VStack(alignment: .leading, spacing: 24){
                     VStack(alignment: .leading) {
-                        Text("Fri, Jul 26")
+                        Text(dateFormatter.string(from: emotion.date ?? Date()))
                             .plusJakartaFont(.regular, 12)
                             .foregroundColor(.grey)
-                        Text("3:03 PM")
+                        Text(timeFormatter.string(from: emotion.date ?? Date()))
                             .plusJakartaFont(.regular, 12)
                             .foregroundColor(.grey)
                     }
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Feeling")
                             .plusJakartaFont(.regular, 12)
-                        Text("Exhausted")
+                        Text(emotion.feel)
                             .plusJakartaFont(.medium, 18)
                             .foregroundColor(
                                 emotion.iconType.color
