@@ -12,7 +12,6 @@ import ComposableArchitecture
 @Reducer
 struct HomeReducer {
     struct State: Equatable {
-        var emotions: [EmotionModel] = todayEmotions
     }
     
     enum Action: Equatable {
