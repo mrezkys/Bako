@@ -148,30 +148,3 @@ struct EmotionCardView: View {
     }
 }
 
-
-var todayEmotions: [EmotionModel] = [
-    EmotionModel(
-        date: Date.now,
-        feel: "Exhausted",
-        iconType: .exhausted,
-        category: .negative
-    ),
-    EmotionModel(
-        date: Date.now,
-        feel: "Thankful",
-        iconType: .smile,
-        category: .positive
-    ),
-    EmotionModel(
-        date: Date.now,
-        feel: "Confident",
-        iconType: .cool,
-        category: .positive
-    ),
-    EmotionModel(
-        date: Date.now,
-        feel: "Exhausted",
-        iconType: .affectionate,
-        category: .negative
-    ),
-]

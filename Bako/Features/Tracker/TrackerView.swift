@@ -7,9 +7,11 @@
 
 import SwiftUI
 import ComposableArchitecture
+import SwiftData
 
 struct TrackerView: View {
     let store: StoreOf<TrackerReducer>
+    @Query private var emotionList: [EmotionModel]
 
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
@@ -87,7 +89,7 @@ struct TrackerView: View {
                             .cornerRadius(24)
                         }
                         VStack (alignment: .leading, spacing: 16) {
-                            ForEach(todayEmotions) { emotion in
+                            ForEach(emotionList) { emotion in
                                 EmotionCardView(emotion: emotion)
                             }
                         }
