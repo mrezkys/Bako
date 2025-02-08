@@ -63,9 +63,13 @@ struct TrackerView: View {
                                 .plusJakartaFont(.regular, 12)
                                 .opacity(0.4)
                         }
+                        let filteredEmotions = emotionList.filter { emotion in
+                            guard let date = emotion.date else { return false }
+                            return Calendar.current.isDate(date, inSameDayAs: viewStore.selectedDate)
+                        }
                         HStack(spacing: 16) {
                             HStack (spacing: 24) {
-                                Text("0")
+                                Text("\(filteredEmotions.filter { $0.category == .positive }.count)")
                                     .plusJakartaFont(.bold, 18)
                                 Text("Positive\nFeelings")
                                     .plusJakartaFont(.medium, 14)
@@ -77,7 +81,7 @@ struct TrackerView: View {
                             .cornerRadius(24)
                             
                             HStack (spacing: 24) {
-                                Text("0")
+                                Text("\(filteredEmotions.filter { $0.category == .negative }.count)")
                                     .plusJakartaFont(.bold, 18)
                                 Text("Negative\nFeelings")
                                     .plusJakartaFont(.medium, 14)
@@ -89,7 +93,7 @@ struct TrackerView: View {
                             .cornerRadius(24)
                         }
                         VStack (alignment: .leading, spacing: 16) {
-                            ForEach(emotionList) { emotion in
+                            ForEach(filteredEmotions) { emotion in
                                 EmotionCardView(emotion: emotion)
                             }
                         }
