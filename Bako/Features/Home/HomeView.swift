@@ -13,6 +13,13 @@ struct HomeView: View {
     let store: StoreOf<HomeReducer>
     @Query private var emotionList: [EmotionModel]
     
+    var todayEmotions: [EmotionModel] {
+        emotionList.filter { emotion in
+            guard let date = emotion.date else { return false }
+            return Calendar.current.isDate(date, inSameDayAs: Date())
+        }
+    }
+    
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             ScrollView {
@@ -48,7 +55,7 @@ struct HomeView: View {
                     VStack (alignment: .leading, spacing: 16) {
                         Text("Today's Check In")
                             .plusJakartaFont(.bold, 16)
-                        EmotionTimelineView(emotions: .constant(emotionList))
+                        EmotionTimelineView(emotions: .constant(todayEmotions))
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(24)
