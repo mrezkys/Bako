@@ -175,6 +175,8 @@ struct FormFeelingView: View {
                 viewStore.send(.onAppear)
             }
         }
+        .navigationTitle("‎ ‎ Form Feeling‎ ‎ ")
+
     }
 }
 

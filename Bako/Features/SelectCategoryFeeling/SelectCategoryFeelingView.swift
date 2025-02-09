@@ -14,6 +14,7 @@ struct SelectCategoryFeelingView: View {
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             VStack(alignment: .center) {
+                Spacer().frame(height: 16)
                 Text("Tap the color that represents your feeling right now")
                     .plusJakartaFont(.bold, 24)
                     .padding(.trailing, 24)
@@ -60,6 +61,7 @@ struct SelectCategoryFeelingView: View {
             .padding(24)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
+        .navigationTitle("Select Category")
     }
 }
 

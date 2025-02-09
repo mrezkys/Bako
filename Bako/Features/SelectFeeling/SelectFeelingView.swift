@@ -96,6 +96,7 @@ struct EmotionCirclesView: View {
             }
             .clipped()
         }
+        .navigationTitle("Select Feeling")
     }
 
     func computeEmotionPositions(size: CGSize, count: Int) -> [CGPoint] {
