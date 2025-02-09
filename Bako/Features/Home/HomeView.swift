@@ -20,6 +20,10 @@ struct HomeView: View {
         }
     }
     
+    var lastFiveEmotions: [EmotionModel] {
+        Array(emotionList.suffix(5))
+    }
+    
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             ScrollView {
@@ -53,9 +57,9 @@ struct HomeView: View {
                         .padding(24)
                     }
                     VStack (alignment: .leading, spacing: 16) {
-                        Text("Today's Check In")
+                        Text("Last Check-in")
                             .plusJakartaFont(.bold, 16)
-                        EmotionTimelineView(emotions: .constant(todayEmotions))
+                        EmotionTimelineView(emotions: .constant(lastFiveEmotions))
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(24)
