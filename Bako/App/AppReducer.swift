@@ -115,6 +115,7 @@ struct AppReducer {
                 
             case .formFeeling(.delegate(.routeToSuccessSubmit)):
                 state.successSubmit = SuccessSubmitFeelingReducer.State()
+                state.path.removeAll()
                 state.path.append(.successSubmit)
                 return .none
                 
