@@ -24,20 +24,12 @@ struct FormFeelingReducer {
         }
         
         var selectedEmotion: EmotionModel?
-        var isFormValid: Bool = false
-        var showError: Bool = false
         var currentDate: Date = Date()
         var modelContext: ModelContext?
         
         init(selectedEmotion: EmotionModel? = nil, modelContext: ModelContext? = nil) {
             self.selectedEmotion = selectedEmotion
             self.modelContext = modelContext
-            self.validateForm()
-        }
-        
-        mutating func validateForm() {
-            // Form is valid if journal is not empty and has at least 3 characters
-            isFormValid = journal.trimmingCharacters(in: .whitespacesAndNewlines).count >= 3
         }
     }
     
@@ -47,8 +39,6 @@ struct FormFeelingReducer {
         case selectActivity(String)
         case selectPlace(String)
         case saveButtonTapped
-        case validateForm
-        case setShowError(Bool)
         case delegate(Delegate)
         case addCustomActivity(String)
         case addCustomPlace(String)
@@ -80,7 +70,6 @@ struct FormFeelingReducer {
                 
             case let .updateJournal(text):
                 state.journal = text
-                state.validateForm()
                 return .none
                 
             case let .selectActivity(activity):
@@ -94,27 +83,7 @@ struct FormFeelingReducer {
                 return .none
                 
             case .saveButtonTapped:
-                if state.isFormValid {
-                    return .send(.saveEmotion)
-                } else {
-                    state.showError = true
-                    return .send(.setShowError(true))
-                }
-                
-            case .validateForm:
-                state.validateForm()
-                return .none
-                
-            case let .setShowError(show):
-                state.showError = show
-                if show {
-                    // Auto-hide error after 3 seconds
-                    return .run { send in
-                        try await Task.sleep(for: .seconds(3))
-                        await send(.setShowError(false))
-                    }
-                }
-                return .none
+                return .send(.saveEmotion)
                 
             case .delegate:
                 return .none

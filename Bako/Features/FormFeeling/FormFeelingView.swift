@@ -63,16 +63,6 @@ struct FormFeelingView: View {
                                     .padding(16)
                                     .background(.lightestGrey)
                                     .cornerRadius(16)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .stroke(viewStore.showError ? Color.red : Color.clear, lineWidth: 1)
-                                    )
-                                    
-                                    if viewStore.showError {
-                                        Text("Please write at least 3 characters")
-                                            .foregroundColor(.red)
-                                            .plusJakartaFont(.regular, 12)
-                                    }
                                 }
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 
@@ -143,11 +133,9 @@ struct FormFeelingView: View {
                             .padding(.vertical, 16)
                             .frame(maxWidth: .infinity)
                             .background(Color.primaryBlue)
-                            .opacity(viewStore.isFormValid ? 1 : 0.6)
                             .foregroundColor(.white)
                             .cornerRadius(48)
                     }
-                    .disabled(!viewStore.isFormValid)
                     .padding(.horizontal, 24)
                     .padding(.vertical, 16)
                     .background(.white)
