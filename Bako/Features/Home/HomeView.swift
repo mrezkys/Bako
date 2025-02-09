@@ -34,7 +34,7 @@ struct HomeView: View {
                             .scaledToFill()
                             .frame(height: 335)
                         VStack(alignment: .leading, spacing: 16) {
-                            Text("Today might be rough, but you passed it! How you'd feel, Mala?")
+                            Text("Today might be rough, but you passed it! How do you feel today?")
                                 .plusJakartaFont(.medium, 16)
                                 .lineSpacing(5)
                                 .foregroundColor(.white)
