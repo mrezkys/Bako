@@ -4,7 +4,7 @@ Bako is an iOS application built using The Composable Architecture (TCA), servin
 
 ## About Bako
 
-Bako appears to be an app focused on emotions and feelings, allowing users to select and categorize their feelings.
+Bako is an emotion tracker app that helps users identify, categorize, and log their emotions.
 
 ## Technology Stack
 
@@ -45,3 +45,8 @@ TCA provides several key benefits:
 - iOS 17.0+
 - Xcode 16.0+
 - Swift 5+
+
+## Contributors
+
+- **Developer**: Muhammad Rezky Sulihin ([LinkedIn](https://www.linkedin.com/in/mrezkys/))
+- **Designer**: Amanda Tri Utami Permatasari ([LinkedIn](https://www.linkedin.com/in/amandatriutamipermatasari/))
