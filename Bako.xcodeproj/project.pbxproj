@@ -50,6 +50,7 @@
 		A6B8574E2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8574D2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift */; };
 		A6B857512D57B6A50004DB64 /* DetailFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B857502D57B69F0004DB64 /* DetailFeelingReducer.swift */; };
 		A6B857532D57B6AF0004DB64 /* DetailFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B857522D57B6AF0004DB64 /* DetailFeelingView.swift */; };
+		A6C142542D58CB8300F2994F /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C142522D58CB8300F2994F /* AppDependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,7 @@
 		A6B8574D2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSubmitFeelingReducer.swift; sourceTree = "<group>"; };
 		A6B857502D57B69F0004DB64 /* DetailFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFeelingReducer.swift; sourceTree = "<group>"; };
 		A6B857522D57B6AF0004DB64 /* DetailFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFeelingView.swift; sourceTree = "<group>"; };
+		A6C142522D58CB8300F2994F /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +342,7 @@
 				A6A71EF72D4A59B7008F9977 /* AppReducer.swift */,
 				A6A71EFC2D4A5B84008F9977 /* AppStore.swift */,
 				A6A71EFE2D4A5CA5008F9977 /* AppView.swift */,
+				A6C142522D58CB8300F2994F /* AppDependencies.swift */,
 				A6A71F002D4A5F65008F9977 /* Route.swift */,
 			);
 			path = App;
@@ -446,6 +449,7 @@
 				A6B857532D57B6AF0004DB64 /* DetailFeelingView.swift in Sources */,
 				A67921002D521AEA000BAAD6 /* SelectFeelingReducer.swift in Sources */,
 				A673983A2CEBB0BB00967654 /* OnboardingView.swift in Sources */,
+				A6C142542D58CB8300F2994F /* AppDependencies.swift in Sources */,
 				A65B4CA32CF0D829009E5B20 /* FormFeelingView.swift in Sources */,
 				A601B7B32D513E8D001FBF99 /* TrackerReducer.swift in Sources */,
 				A6A71EF82D4A59B7008F9977 /* AppReducer.swift in Sources */,

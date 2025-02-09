@@ -24,12 +24,18 @@ struct BakoApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                AppView(store: Store(
-                    initialState: AppReducer.State(
-                        modelContext: modelContainer.mainContext
-                    ),
-                    reducer: { AppReducer() }
-                ))
+                AppView(
+                    store: Store(
+                        initialState: AppReducer.State(
+                            modelContext: modelContainer.mainContext
+                        ),
+                        reducer: { AppReducer() },
+                        withDependencies: {
+                            $0.userDefaults = .standard
+                        }
+                    )
+                    
+                )
             }
         }
         .modelContainer(modelContainer)
