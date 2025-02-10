@@ -70,16 +70,6 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    HomeView(
-        store: Store(
-            initialState: HomeReducer.State()
-        ) {
-            HomeReducer()
-        }
-    )
-}
-
 struct EmotionTimelineView: View {
     @Binding var emotions: [EmotionModel]
     var body: some View {
