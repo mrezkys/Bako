@@ -209,18 +209,28 @@ struct ChipSelector<T: Hashable>: View {
     }
 
     private func createFlowLayout(maxWidth: CGFloat) -> some View {
+        let adjustedMaxWidth = maxWidth - 32
         var currentRowWidth: CGFloat = 0
-        var rows: [[T?]] = [[nil]] // Always include "+" as the first element
+        var rows: [[T?]] = []
+        let plusButtonWidth: CGFloat = 32
+
+        // Start first row with the "+" button
+        rows.append([nil])
+        currentRowWidth = plusButtonWidth
 
         // Organize items into rows based on their dynamic width
         for item in items {
             let itemWidth = calculateWidth(for: displayText(item))
-            if currentRowWidth + itemWidth + 10 > maxWidth { // Move to the next row
-                currentRowWidth = 0
+            
+            // Check if adding this item would exceed adjustedMaxWidth
+            if currentRowWidth + itemWidth + 10 > adjustedMaxWidth {
+                // Start new row WITHOUT the "+" button
                 rows.append([])
+                currentRowWidth = 0
             }
+            
             rows[rows.count - 1].append(item)
-            currentRowWidth += itemWidth + 10 // Add item width + spacing
+            currentRowWidth += itemWidth + 10
         }
 
         return VStack(alignment: .leading, spacing: 10) {
@@ -244,8 +254,9 @@ struct ChipSelector<T: Hashable>: View {
                                     }
                                 }
                         } else {
-                            // Render the "+" button
+                            // Render the "+" button with updated fixed width
                             Text("+")
+                                .frame(width: plusButtonWidth)
                                 .padding()
                                 .background(.lightestGrey)
                                 .cornerRadius(20)
