@@ -37,6 +37,7 @@ struct BakoApp: App {
                     
                 )
             }
+            .preferredColorScheme(.light)
         }
         .modelContainer(modelContainer)
     }
