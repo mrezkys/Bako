@@ -68,6 +68,11 @@ struct AppReducer {
                 state.tracker = TrackerReducer.State()
                 state.path.append(.tracker)
                 return .none
+
+            case .home(.delegate(.routeToDetailFeeling(let emotion))):
+                state.detailFeeling = DetailFeelingReducer.State(emotion: emotion)
+                state.path.append(.details(emotion))
+                return .none
                 
             case .home:
                 return .none

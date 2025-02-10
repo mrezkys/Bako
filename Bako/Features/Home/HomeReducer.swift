@@ -17,8 +17,10 @@ struct HomeReducer {
     enum Action: Equatable {
         case todaysMoodButtonTapped
         case delegate(Delegate)
+        case emotionCardTapped(EmotionModel)
         enum Delegate: Equatable {
             case routeToTrackerView
+            case routeToDetailFeeling(EmotionModel)
         }
     }
     
@@ -27,6 +29,8 @@ struct HomeReducer {
             switch action {
             case .todaysMoodButtonTapped:
                 return .send(.delegate(.routeToTrackerView))
+            case .emotionCardTapped(let emotion):
+                return .send(.delegate(.routeToDetailFeeling(emotion)))
             case .delegate:
                 return .none
             }

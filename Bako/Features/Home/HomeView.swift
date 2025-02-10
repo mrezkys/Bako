@@ -59,7 +59,12 @@ struct HomeView: View {
                     VStack (alignment: .leading, spacing: 16) {
                         Text("Last Check-in")
                             .plusJakartaFont(.bold, 16)
-                        EmotionTimelineView(emotions: .constant(lastFiveEmotions))
+                        EmotionTimelineView(
+                            emotions: .constant(lastFiveEmotions),
+                            didTapEmotion: { emotion in
+                                store.send(.emotionCardTapped(emotion))
+                            }
+                        )
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(24)
@@ -72,6 +77,7 @@ struct HomeView: View {
 
 struct EmotionTimelineView: View {
     @Binding var emotions: [EmotionModel]
+    var didTapEmotion: ((EmotionModel) -> ())
     var body: some View {
         // Right Side Content
         VStack(alignment: .leading, spacing: 0) {
@@ -85,6 +91,9 @@ struct EmotionTimelineView: View {
                     }
                     EmotionCardView(emotion: emotion)
                         .padding(.bottom, 16)
+                        .onTapGesture {
+                            didTapEmotion(emotion)
+                        }
                 }
                 .background(
                     HStack {
