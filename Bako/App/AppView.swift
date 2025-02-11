@@ -18,6 +18,7 @@ struct AppView: View {
                                 action: \.home
                             )
                         )
+                        .transition(.move(edge: .trailing))
                     } else {
                         OnboardingView(
                             store: store.scope(
@@ -27,6 +28,7 @@ struct AppView: View {
                         )
                     }
                 }
+                .animation(.smooth, value: viewStore.state != nil)
             }
         } destination: { route in
             // Destinations for other routes

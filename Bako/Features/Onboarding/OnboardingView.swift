@@ -27,6 +27,7 @@ struct OnboardingView: View {
                         .edgesIgnoringSafeArea(.bottom)
                 }
                 .edgesIgnoringSafeArea(.bottom)
+                .transition(.move(edge: .leading))
                 
                 VStack {
                     Spacer()
