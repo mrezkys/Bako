@@ -73,6 +73,13 @@ struct AppView: View {
                         action: \.detailFeeling
                     )
                 )
+            case .about:
+                AboutView(
+                    store: store.scope(
+                        state: \.about!,
+                        action: \.about
+                    )
+                )
             default:
                 EmptyView()
             }

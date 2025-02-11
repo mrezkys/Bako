@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A601B7B12D50FC5A001FBF99 /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A601B7B02D50FC52001FBF99 /* HomeReducer.swift */; };
 		A601B7B32D513E8D001FBF99 /* TrackerReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A601B7B22D513E87001FBF99 /* TrackerReducer.swift */; };
+		A63286B42D5B6F5800ABC3F4 /* AboutReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63286B22D5B6F5800ABC3F4 /* AboutReducer.swift */; };
+		A63286B52D5B6F5800ABC3F4 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63286B32D5B6F5800ABC3F4 /* AboutView.swift */; };
 		A65B4C912CEF9A21009E5B20 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4C902CEF9A21009E5B20 /* HomeView.swift */; };
 		A65B4C942CEFBE98009E5B20 /* TrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4C932CEFBE98009E5B20 /* TrackerView.swift */; };
 		A65B4C972CEFC66D009E5B20 /* SelectCategoryFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B4C962CEFC66D009E5B20 /* SelectCategoryFeelingView.swift */; };
@@ -56,6 +58,8 @@
 /* Begin PBXFileReference section */
 		A601B7B02D50FC52001FBF99 /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
 		A601B7B22D513E87001FBF99 /* TrackerReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerReducer.swift; sourceTree = "<group>"; };
+		A63286B22D5B6F5800ABC3F4 /* AboutReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutReducer.swift; sourceTree = "<group>"; };
+		A63286B32D5B6F5800ABC3F4 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		A65B4C902CEF9A21009E5B20 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A65B4C932CEFBE98009E5B20 /* TrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerView.swift; sourceTree = "<group>"; };
 		A65B4C962CEFC66D009E5B20 /* SelectCategoryFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryFeelingView.swift; sourceTree = "<group>"; };
@@ -113,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A63286AF2D5B6E5B00ABC3F4 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				A63286B22D5B6F5800ABC3F4 /* AboutReducer.swift */,
+				A63286B32D5B6F5800ABC3F4 /* AboutView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		A65B4C8F2CEF9A16009E5B20 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +234,7 @@
 		A67398362CEBB0A100967654 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A63286AF2D5B6E5B00ABC3F4 /* About */,
 				A6B8574F2D57B68E0004DB64 /* DetailFeeling */,
 				A67920FC2D5217EE000BAAD6 /* SuccessSubmitFeeling */,
 				A67920FB2D5217E1000BAAD6 /* FormFeeling */,
@@ -446,6 +460,8 @@
 				A67920FE2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift in Sources */,
 				A6A71EF62D4A599F008F9977 /* BakoApp.swift in Sources */,
 				A6A71F012D4A5F65008F9977 /* Route.swift in Sources */,
+				A63286B42D5B6F5800ABC3F4 /* AboutReducer.swift in Sources */,
+				A63286B52D5B6F5800ABC3F4 /* AboutView.swift in Sources */,
 				A6B857532D57B6AF0004DB64 /* DetailFeelingView.swift in Sources */,
 				A67921002D521AEA000BAAD6 /* SelectFeelingReducer.swift in Sources */,
 				A673983A2CEBB0BB00967654 /* OnboardingView.swift in Sources */,

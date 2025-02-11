@@ -57,14 +57,31 @@ struct HomeView: View {
                         .padding(24)
                     }
                     VStack (alignment: .leading, spacing: 16) {
-                        Text("Last Check-in")
-                            .plusJakartaFont(.bold, 16)
-                        EmotionTimelineView(
-                            emotions: .constant(lastFiveEmotions),
-                            didTapEmotion: { emotion in
-                                store.send(.emotionCardTapped(emotion))
-                            }
-                        )
+                        if !lastFiveEmotions.isEmpty {
+                            Text("Last Check-in")
+                                .plusJakartaFont(.bold, 16)
+                            EmotionTimelineView(
+                                emotions: .constant(lastFiveEmotions),
+                                didTapEmotion: { emotion in
+                                    store.send(.emotionCardTapped(emotion))
+                                }
+                            )
+                        }
+                        HStack{
+                            Text("About App")
+                                .foregroundColor(.grey)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(.grey)
+                        }
+                        .padding(16)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(.lightestGrey)
+                        .cornerRadius(12)
+                        .onTapGesture {
+                            store.send(.aboutButtonTapped)
+                        }
+                        
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(24)

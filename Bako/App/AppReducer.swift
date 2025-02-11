@@ -22,6 +22,7 @@ struct AppReducer {
         var modelContext: ModelContext?
         var successSubmit: SuccessSubmitFeelingReducer.State?
         var detailFeeling: DetailFeelingReducer.State?
+        var about: AboutReducer.State?
         
         init(
             path: StackState<Route> = StackState<Route>(),
@@ -56,6 +57,7 @@ struct AppReducer {
         case formFeeling(FormFeelingReducer.Action)
         case successSubmit(SuccessSubmitFeelingReducer.Action)
         case detailFeeling(DetailFeelingReducer.Action)
+        case about(AboutReducer.Action)
     }
     
     var body: some ReducerOf<Self> {
@@ -72,6 +74,11 @@ struct AppReducer {
             case .home(.delegate(.routeToDetailFeeling(let emotion))):
                 state.detailFeeling = DetailFeelingReducer.State(emotion: emotion)
                 state.path.append(.details(emotion))
+                return .none
+                
+            case .home(.delegate(.routeToAboutView)):
+                state.about = AboutReducer.State()
+                state.path.append(.about)
                 return .none
                 
             case .home:
@@ -139,6 +146,9 @@ struct AppReducer {
                 
             case .detailFeeling:
                 return .none
+                
+            case .about:
+                return .none
             }
         }
         .forEach(\.path, action: \.path) {
@@ -167,6 +177,9 @@ struct AppReducer {
         }
         .ifLet(\.detailFeeling, action: \.detailFeeling) {
             DetailFeelingReducer()
+        }
+        .ifLet(\.about, action: \.about) {
+            AboutReducer()
         }
     }
 }

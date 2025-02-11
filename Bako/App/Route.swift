@@ -16,4 +16,5 @@ enum Route: Equatable, Hashable {
     case successSubmit
     case tracker
     case details(EmotionModel)
+    case about
 }
