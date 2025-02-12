@@ -12,6 +12,45 @@ Bako is an emotion tracker app that helps users identify, categorize, and log th
 - **Architecture**: The Composable Architecture (TCA)
 - **Platform**: iOS
 - **Language**: Swift
+- **Data Persistence**: SwiftData
+- **Dependency Management**: Swift Package Manager
+
+## Project Structure
+
+The project follows a structure organized around The Composable Architecture (TCA), divided into several main groups:
+
+```
+Bako/
+├── App/                     # Core application files
+│   ├── BakoApp.swift        # App entry point
+│   ├── AppReducer.swift     # Root reducer
+│   ├── AppView.swift        # Root view
+│   ├── AppDependencies.swift# Dependency management
+│   ├── AppModels.swift      # SwiftData models
+│   ├── AppStore.swift       # Global store
+│   └── AppRoute.swift       # Navigation routes
+├── Features/                # Feature modules
+│   ├── About/               # About feature
+│   ├── DetailFeeling/       # Emotion detail view
+│   ├── FormFeeling/         # Emotion form
+│   ├── Home/                # Home screen
+│   ├── Onboarding/          # Onboarding flow
+│   ├── SelectCategoryFeeling/# Emotion category selection
+│   ├── SelectFeeling/       # Specific emotion selection
+│   ├── SuccessSubmitFeeling/ # Success screen after submission
+│   └── Tracker/             # Emotion tracker
+├── Core/                    # Shared resources
+│   ├── Common/              # Shared components and utilities
+│   │   ├── Components/      # Reusable UI components
+│   │   ├── Enums/           # Shared enums
+│   │   ├── Extensions/      # Swift extensions
+│   │   └── Models/          # Data models
+│   ├── Constants/           # Constants and mock data
+│   └── Design/              # Design assets
+│       ├── Assets/          # Asset catalogs
+│       └── Fonts/           # Custom fonts
+└── Preview Content/         # Preview assets
+```
 
 ## The Composable Architecture
 
