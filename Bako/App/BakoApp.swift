@@ -15,10 +15,7 @@ struct BakoApp: App {
         WindowGroup {
             NavigationView {
                 AppView(
-                    store: Store(
-                        initialState: AppReducer.State(),
-                        reducer: { AppReducer() }
-                    )
+                    store: appStore
                 )
             }
             .preferredColorScheme(.light)
