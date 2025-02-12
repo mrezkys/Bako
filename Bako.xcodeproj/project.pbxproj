@@ -39,6 +39,10 @@
 		A673985D2CEBB2F400967654 /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A673984F2CEBB2F400967654 /* PlusJakartaSans-SemiBold.ttf */; };
 		A67398612CEBB47300967654 /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67398602CEBB47300967654 /* Text+Extensions.swift */; };
 		A678215C2D5D2D2400858F03 /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A678215B2D5D2D2400858F03 /* AppModels.swift */; };
+		A67821602D5D2F5C00858F03 /* TimelineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A678215F2D5D2F5C00858F03 /* TimelineModel.swift */; };
+		A67821622D5D2F7B00858F03 /* EmotionIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67821612D5D2F7B00858F03 /* EmotionIconType.swift */; };
+		A67821642D5D2F9D00858F03 /* DayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67821632D5D2F9D00858F03 /* DayType.swift */; };
+		A67821672D5D2FC000858F03 /* EmotionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67821662D5D2FC000858F03 /* EmotionCategory.swift */; };
 		A67920FE2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67920FD2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift */; };
 		A67921002D521AEA000BAAD6 /* SelectFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67920FF2D521AEA000BAAD6 /* SelectFeelingReducer.swift */; };
 		A67921022D521AF7000BAAD6 /* FormFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67921012D521AF7000BAAD6 /* FormFeelingReducer.swift */; };
@@ -91,6 +95,10 @@
 		A673985E2CEBB35B00967654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A67398602CEBB47300967654 /* Text+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extensions.swift"; sourceTree = "<group>"; };
 		A678215B2D5D2D2400858F03 /* AppModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModels.swift; sourceTree = "<group>"; };
+		A678215F2D5D2F5C00858F03 /* TimelineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineModel.swift; sourceTree = "<group>"; };
+		A67821612D5D2F7B00858F03 /* EmotionIconType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionIconType.swift; sourceTree = "<group>"; };
+		A67821632D5D2F9D00858F03 /* DayType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayType.swift; sourceTree = "<group>"; };
+		A67821662D5D2FC000858F03 /* EmotionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionCategory.swift; sourceTree = "<group>"; };
 		A67920FD2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryFeelingReducer.swift; sourceTree = "<group>"; };
 		A67920FF2D521AEA000BAAD6 /* SelectFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFeelingReducer.swift; sourceTree = "<group>"; };
 		A67921012D521AF7000BAAD6 /* FormFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFeelingReducer.swift; sourceTree = "<group>"; };
@@ -175,6 +183,7 @@
 		A667243E2D528DBD004CC431 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A67821652D5D2FA600858F03 /* Enums */,
 				A66724402D528DD7004CC431 /* Models */,
 				A673985F2CEBB46500967654 /* Extensions */,
 				A667243F2D528DC6004CC431 /* Components */,
@@ -192,6 +201,7 @@
 		A66724402D528DD7004CC431 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A678215F2D5D2F5C00858F03 /* TimelineModel.swift */,
 				A6B8574B2D566DED0004DB64 /* Model.swift */,
 			);
 			path = Models;
@@ -313,6 +323,16 @@
 				A67398602CEBB47300967654 /* Text+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A67821652D5D2FA600858F03 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				A67821662D5D2FC000858F03 /* EmotionCategory.swift */,
+				A67821632D5D2F9D00858F03 /* DayType.swift */,
+				A67821612D5D2F7B00858F03 /* EmotionIconType.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		A67920FA2D5217C6000BAAD6 /* SelectCategoryFeeling */ = {
@@ -462,12 +482,15 @@
 				A65B4CA12CF0A495009E5B20 /* PositiveEmotions.swift in Sources */,
 				A678215C2D5D2D2400858F03 /* AppModels.swift in Sources */,
 				A67920FE2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift in Sources */,
+				A67821672D5D2FC000858F03 /* EmotionCategory.swift in Sources */,
 				A6A71EF62D4A599F008F9977 /* BakoApp.swift in Sources */,
 				A6A71F012D4A5F65008F9977 /* AppRoute.swift in Sources */,
+				A67821642D5D2F9D00858F03 /* DayType.swift in Sources */,
 				A63286B42D5B6F5800ABC3F4 /* AboutReducer.swift in Sources */,
 				A63286B52D5B6F5800ABC3F4 /* AboutView.swift in Sources */,
 				A6B857532D57B6AF0004DB64 /* DetailFeelingView.swift in Sources */,
 				A67921002D521AEA000BAAD6 /* SelectFeelingReducer.swift in Sources */,
+				A67821602D5D2F5C00858F03 /* TimelineModel.swift in Sources */,
 				A673983A2CEBB0BB00967654 /* OnboardingView.swift in Sources */,
 				A6C142542D58CB8300F2994F /* AppDependencies.swift in Sources */,
 				A65B4CA32CF0D829009E5B20 /* FormFeelingView.swift in Sources */,
@@ -484,6 +507,7 @@
 				A6B857512D57B6A50004DB64 /* DetailFeelingReducer.swift in Sources */,
 				A6B8574C2D566DF00004DB64 /* Model.swift in Sources */,
 				A6A71F032D4A8609008F9977 /* OnboardingReducer.swift in Sources */,
+				A67821622D5D2F7B00858F03 /* EmotionIconType.swift in Sources */,
 				A67921022D521AF7000BAAD6 /* FormFeelingReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
