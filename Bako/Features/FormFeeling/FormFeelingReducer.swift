@@ -5,6 +5,7 @@ import SwiftData
 @Reducer
 struct FormFeelingReducer {
     @Dependency(\.userDefaults) var userDefaults
+    @Dependency(\.swiftDataClient) var swiftDataClient
     
     struct State: Equatable {
         var journal: String = ""
@@ -25,11 +26,9 @@ struct FormFeelingReducer {
         
         var selectedEmotion: EmotionModel?
         var currentDate: Date = Date()
-        var modelContext: ModelContext?
         
-        init(selectedEmotion: EmotionModel? = nil, modelContext: ModelContext? = nil) {
+        init(selectedEmotion: EmotionModel? = nil) {
             self.selectedEmotion = selectedEmotion
-            self.modelContext = modelContext
         }
     }
     
@@ -125,8 +124,7 @@ struct FormFeelingReducer {
                 return .none
                 
             case .saveEmotion:
-                guard let modelContext = state.modelContext,
-                      var emotion = state.selectedEmotion else {
+                guard var emotion = state.selectedEmotion else {
                     return .none
                 }
                 
@@ -136,14 +134,18 @@ struct FormFeelingReducer {
                 emotion.place = state.selectedPlace
                 emotion.date = state.currentDate
                 
-                // Save to SwiftData
-                modelContext.insert(emotion)
-                do {
-                    try modelContext.save()
-                    return .send(.emotionSaved)
-                } catch {
-                    print("Failed to save emotion: \(error)")
-                    return .none
+                return .run { [emotion] send in
+                    do {
+                        // Access SwiftDataClient on the main actor
+                        try await MainActor.run {
+                            let context = swiftDataClient.context()
+                            context.insert(emotion)
+                            try swiftDataClient.save()
+                        }
+                        await send(.emotionSaved)
+                    } catch {
+                        print("Failed to save emotion: \(error)")
+                    }
                 }
                 
             case .emotionSaved:

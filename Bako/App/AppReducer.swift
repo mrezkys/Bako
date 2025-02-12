@@ -8,6 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 import SwiftData
+import Dependencies
 
 @Reducer
 struct AppReducer {
@@ -19,7 +20,6 @@ struct AppReducer {
         var selectCategoryFeeling: SelectCategoryFeelingReducer.State?
         var selectFeeling: SelectFeelingReducer.State?
         var formFeeling: FormFeelingReducer.State?
-        var modelContext: ModelContext?
         var successSubmit: SuccessSubmitFeelingReducer.State?
         var detailFeeling: DetailFeelingReducer.State?
         var about: AboutReducer.State?
@@ -33,7 +33,7 @@ struct AppReducer {
             selectFeeling: SelectFeelingReducer.State? = nil,
             formFeeling: FormFeelingReducer.State? = nil,
             detailFeeling: DetailFeelingReducer.State? = nil,
-            modelContext: ModelContext? = nil
+            about: AboutReducer.State? = nil
         ) {
             self.path = path
             self.home = home
@@ -43,7 +43,7 @@ struct AppReducer {
             self.selectFeeling = selectFeeling
             self.formFeeling = formFeeling
             self.detailFeeling = detailFeeling
-            self.modelContext = modelContext
+            self.about = about
         }
     }
     
@@ -59,6 +59,8 @@ struct AppReducer {
         case detailFeeling(DetailFeelingReducer.Action)
         case about(AboutReducer.Action)
     }
+    
+    @Dependency(\.swiftDataClient) var swiftDataClient
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -115,8 +117,7 @@ struct AppReducer {
                 if let selectedIndex = state.selectFeeling?.selectedEmotionIndex,
                    let selectedEmotion = state.selectFeeling?.emotions[selectedIndex] {
                     state.formFeeling = FormFeelingReducer.State(
-                        selectedEmotion: selectedEmotion,
-                        modelContext: state.modelContext
+                        selectedEmotion: selectedEmotion
                     )
                     state.path.append(.formFeeling)
                 }
