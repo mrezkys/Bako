@@ -43,6 +43,10 @@
 		A67821622D5D2F7B00858F03 /* EmotionIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67821612D5D2F7B00858F03 /* EmotionIconType.swift */; };
 		A67821642D5D2F9D00858F03 /* DayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67821632D5D2F9D00858F03 /* DayType.swift */; };
 		A67821672D5D2FC000858F03 /* EmotionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67821662D5D2FC000858F03 /* EmotionCategory.swift */; };
+		A67821692D5D302D00858F03 /* EmotionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67821682D5D302D00858F03 /* EmotionCardView.swift */; };
+		A678216B2D5D304200858F03 /* EmotionTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A678216A2D5D304200858F03 /* EmotionTimelineView.swift */; };
+		A678216D2D5D306500858F03 /* EmotionCirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A678216C2D5D306500858F03 /* EmotionCirclesView.swift */; };
+		A678216F2D5D30A700858F03 /* ChipSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A678216E2D5D30A700858F03 /* ChipSelector.swift */; };
 		A67920FE2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67920FD2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift */; };
 		A67921002D521AEA000BAAD6 /* SelectFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67920FF2D521AEA000BAAD6 /* SelectFeelingReducer.swift */; };
 		A67921022D521AF7000BAAD6 /* FormFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67921012D521AF7000BAAD6 /* FormFeelingReducer.swift */; };
@@ -99,6 +103,10 @@
 		A67821612D5D2F7B00858F03 /* EmotionIconType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionIconType.swift; sourceTree = "<group>"; };
 		A67821632D5D2F9D00858F03 /* DayType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayType.swift; sourceTree = "<group>"; };
 		A67821662D5D2FC000858F03 /* EmotionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionCategory.swift; sourceTree = "<group>"; };
+		A67821682D5D302D00858F03 /* EmotionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionCardView.swift; sourceTree = "<group>"; };
+		A678216A2D5D304200858F03 /* EmotionTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionTimelineView.swift; sourceTree = "<group>"; };
+		A678216C2D5D306500858F03 /* EmotionCirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionCirclesView.swift; sourceTree = "<group>"; };
+		A678216E2D5D30A700858F03 /* ChipSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipSelector.swift; sourceTree = "<group>"; };
 		A67920FD2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryFeelingReducer.swift; sourceTree = "<group>"; };
 		A67920FF2D521AEA000BAAD6 /* SelectFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFeelingReducer.swift; sourceTree = "<group>"; };
 		A67921012D521AF7000BAAD6 /* FormFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFeelingReducer.swift; sourceTree = "<group>"; };
@@ -194,6 +202,10 @@
 		A667243F2D528DC6004CC431 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A678216E2D5D30A700858F03 /* ChipSelector.swift */,
+				A678216C2D5D306500858F03 /* EmotionCirclesView.swift */,
+				A678216A2D5D304200858F03 /* EmotionTimelineView.swift */,
+				A67821682D5D302D00858F03 /* EmotionCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -494,12 +506,16 @@
 				A673983A2CEBB0BB00967654 /* OnboardingView.swift in Sources */,
 				A6C142542D58CB8300F2994F /* AppDependencies.swift in Sources */,
 				A65B4CA32CF0D829009E5B20 /* FormFeelingView.swift in Sources */,
+				A678216F2D5D30A700858F03 /* ChipSelector.swift in Sources */,
 				A601B7B32D513E8D001FBF99 /* TrackerReducer.swift in Sources */,
 				A6A71EF82D4A59B7008F9977 /* AppReducer.swift in Sources */,
 				A65B4CA52CF260BA009E5B20 /* SuccessSubmitFeelingView.swift in Sources */,
 				A6A71EFD2D4A5B84008F9977 /* AppStore.swift in Sources */,
+				A678216D2D5D306500858F03 /* EmotionCirclesView.swift in Sources */,
+				A678216B2D5D304200858F03 /* EmotionTimelineView.swift in Sources */,
 				A65B4C912CEF9A21009E5B20 /* HomeView.swift in Sources */,
 				A6A71EFF2D4A5CA5008F9977 /* AppView.swift in Sources */,
+				A67821692D5D302D00858F03 /* EmotionCardView.swift in Sources */,
 				A65B4C972CEFC66D009E5B20 /* SelectCategoryFeelingView.swift in Sources */,
 				A65B4C942CEFBE98009E5B20 /* TrackerView.swift in Sources */,
 				A601B7B12D50FC5A001FBF99 /* HomeReducer.swift in Sources */,
