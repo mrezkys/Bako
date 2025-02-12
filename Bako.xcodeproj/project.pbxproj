@@ -47,7 +47,7 @@
 		A6A71EFB2D4A5A39008F9977 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = A6A71EFA2D4A5A39008F9977 /* ComposableArchitecture */; };
 		A6A71EFD2D4A5B84008F9977 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71EFC2D4A5B84008F9977 /* AppStore.swift */; };
 		A6A71EFF2D4A5CA5008F9977 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71EFE2D4A5CA5008F9977 /* AppView.swift */; };
-		A6A71F012D4A5F65008F9977 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71F002D4A5F65008F9977 /* Route.swift */; };
+		A6A71F012D4A5F65008F9977 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71F002D4A5F65008F9977 /* AppRoute.swift */; };
 		A6A71F032D4A8609008F9977 /* OnboardingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71F022D4A8609008F9977 /* OnboardingReducer.swift */; };
 		A6B8574C2D566DF00004DB64 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8574B2D566DED0004DB64 /* Model.swift */; };
 		A6B8574E2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8574D2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift */; };
@@ -98,7 +98,7 @@
 		A6A71EF72D4A59B7008F9977 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		A6A71EFC2D4A5B84008F9977 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		A6A71EFE2D4A5CA5008F9977 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
-		A6A71F002D4A5F65008F9977 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		A6A71F002D4A5F65008F9977 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		A6A71F022D4A8609008F9977 /* OnboardingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingReducer.swift; sourceTree = "<group>"; };
 		A6B8574B2D566DED0004DB64 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A6B8574D2D5678120004DB64 /* SuccessSubmitFeelingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSubmitFeelingReducer.swift; sourceTree = "<group>"; };
@@ -360,7 +360,7 @@
 				A6A71EFE2D4A5CA5008F9977 /* AppView.swift */,
 				A6C142522D58CB8300F2994F /* AppDependencies.swift */,
 				A678215B2D5D2D2400858F03 /* AppModels.swift */,
-				A6A71F002D4A5F65008F9977 /* Route.swift */,
+				A6A71F002D4A5F65008F9977 /* AppRoute.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -463,7 +463,7 @@
 				A678215C2D5D2D2400858F03 /* AppModels.swift in Sources */,
 				A67920FE2D5218F3000BAAD6 /* SelectCategoryFeelingReducer.swift in Sources */,
 				A6A71EF62D4A599F008F9977 /* BakoApp.swift in Sources */,
-				A6A71F012D4A5F65008F9977 /* Route.swift in Sources */,
+				A6A71F012D4A5F65008F9977 /* AppRoute.swift in Sources */,
 				A63286B42D5B6F5800ABC3F4 /* AboutReducer.swift in Sources */,
 				A63286B52D5B6F5800ABC3F4 /* AboutView.swift in Sources */,
 				A6B857532D57B6AF0004DB64 /* DetailFeelingView.swift in Sources */,
