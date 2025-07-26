@@ -41,7 +41,7 @@ struct TrackerReducer {
         case selectDay(DayType)
         case selectDate(Date)
         case toggleDatePicker
-        case closeDatePicker
+        case closeDatePicker(Bool)
         case checkInButtonTapped
         case emotionCardTapped(EmotionModel)
         case delegate(Delegate)
@@ -56,13 +56,13 @@ struct TrackerReducer {
             switch action {
             case .emotionCardTapped(let emotion):
                 return .send(.delegate(.routeToDetailFeeling(emotion)))
-
+                
             case .toggleDatePicker:
                 state.isDatePickerPresented.toggle()
                 return .none
                 
-            case .closeDatePicker:
-                state.isDatePickerPresented = false
+            case let .closeDatePicker(isPresented):
+                state.isDatePickerPresented = isPresented
                 return .none
                 
             case .selectDay(let day):
