@@ -2,86 +2,98 @@ import ComposableArchitecture
 import SwiftUI
 
 struct AppView: View {
-    let store: StoreOf<AppReducer>
+    @Bindable var store: StoreOf<AppReducer>
     
     var body: some View {
         NavigationStackStore(
             store.scope(state: \.path, action: \.path)
         ) {
             // Root view
-            WithViewStore(store, observe: \.home) { viewStore in
-                Group {
-                    if let homeState = viewStore.state {
-                        HomeView(
-                            store: store.scope(
-                                state: \.home!,
-                                action: \.home
-                            )
+            Group {
+                if let homeState = store.home {
+                    HomeView(
+                        store: store.scope(
+                            state: \.home!,
+                            action: \.home
                         )
-                        .transition(.move(edge: .trailing))
-                    } else {
-                        OnboardingView(
-                            store: store.scope(
-                                state: \.onboarding,
-                                action: \.onboarding
-                            )
+                    )
+                    .transition(.move(edge: .trailing))
+                } else {
+                    OnboardingView(
+                        store: store.scope(
+                            state: \.onboarding,
+                            action: \.onboarding
                         )
-                    }
+                    )
                 }
-                .animation(.smooth, value: viewStore.state != nil)
             }
+            .animation(.smooth, value: store.home != nil)
         } destination: { route in
             // Destinations for other routes
             switch route {
             case .selectCategoryFeeling:
-                SelectCategoryFeelingView(
-                    store: store.scope(
-                        state: \.selectCategoryFeeling!,
-                        action: \.selectCategoryFeeling
+                if let selectCategoryState = store.selectCategoryFeeling {
+                    SelectCategoryFeelingView(
+                        store: store.scope(
+                            state: \.selectCategoryFeeling!,
+                            action: \.selectCategoryFeeling
+                        )
                     )
-                )
+                }
             case .selectFeeling:
-                SelectFeelingView(
-                    store: store.scope(
-                        state: \.selectFeeling!,
-                        action: \.selectFeeling
+                if let selectFeelingState = store.selectFeeling {
+                    SelectFeelingView(
+                        store: store.scope(
+                            state: \.selectFeeling!,
+                            action: \.selectFeeling
+                        )
                     )
-                )
+                }
             case .formFeeling:
-                FormFeelingView(
-                    store: store.scope(
-                        state: \.formFeeling!,
-                        action: \.formFeeling
+                if let formFeelingState = store.formFeeling {
+                    FormFeelingView(
+                        store: store.scope(
+                            state: \.formFeeling!,
+                            action: \.formFeeling
+                        )
                     )
-                )
+                }
             case .successSubmit:
-                SuccessSubmitFeelingView(
-                    store: store.scope(
-                        state: \.successSubmit!,
-                        action: \.successSubmit
+                if let successSubmitState = store.successSubmit {
+                    SuccessSubmitFeelingView(
+                        store: store.scope(
+                            state: \.successSubmit!,
+                            action: \.successSubmit
+                        )
                     )
-                )
+                }
             case .tracker:
-                TrackerView(
-                    store: store.scope(
-                        state: \.tracker!,
-                        action: \.tracker
+                if let trackerState = store.tracker {
+                    TrackerView(
+                        store: store.scope(
+                            state: \.tracker!,
+                            action: \.tracker
+                        )
                     )
-                )
+                }
             case .details(let id):
-                DetailFeelingView(
-                    store: store.scope(
-                        state: \.detailFeeling!,
-                        action: \.detailFeeling
+                if let detailFeelingState = store.detailFeeling {
+                    DetailFeelingView(
+                        store: store.scope(
+                            state: \.detailFeeling!,
+                            action: \.detailFeeling
+                        )
                     )
-                )
+                }
             case .about:
-                AboutView(
-                    store: store.scope(
-                        state: \.about!,
-                        action: \.about
+                if let aboutState = store.about {
+                    AboutView(
+                        store: store.scope(
+                            state: \.about!,
+                            action: \.about
+                        )
                     )
-                )
+                }
             default:
                 EmptyView()
             }
