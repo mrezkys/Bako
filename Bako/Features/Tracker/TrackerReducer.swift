@@ -10,6 +10,7 @@ import SwiftUI
 
 @Reducer
 struct TrackerReducer {
+    @ObservableState
     struct State: Equatable {
         var selectedDay: DayType = DayType.fromWeekday(Calendar.current.component(.weekday, from: Date()))
         var selectedDate: Date = Date()

@@ -11,6 +11,7 @@ import ComposableArchitecture
 
 @Reducer
 struct HomeReducer {
+    @ObservableState
     struct State: Equatable {
     }
     

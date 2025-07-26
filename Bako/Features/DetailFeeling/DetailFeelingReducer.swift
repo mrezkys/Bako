@@ -9,6 +9,7 @@ import ComposableArchitecture
 
 @Reducer
 struct DetailFeelingReducer {
+    @ObservableState
     struct State: Equatable {
         let emotion: EmotionModel
         

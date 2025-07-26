@@ -3,6 +3,7 @@ import Foundation
 
 @Reducer
 struct SuccessSubmitFeelingReducer {
+    @ObservableState
     struct State: Equatable {
         // Add any state properties if needed
     }

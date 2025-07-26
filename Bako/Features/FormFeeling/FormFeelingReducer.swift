@@ -7,6 +7,7 @@ struct FormFeelingReducer {
     @Dependency(\.userDefaults) var userDefaults
     @Dependency(\.swiftDataClient) var swiftDataClient
     
+    @ObservableState
     struct State: Equatable {
         var journal: String = ""
         var selectedActivity: String = "Working"

@@ -3,6 +3,7 @@ import Foundation
 
 @Reducer
 struct SelectFeelingReducer {
+    @ObservableState
     struct State: Equatable {
         var selectedEmotionIndex: Int?
         var activeCircleIndex: Int?

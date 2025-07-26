@@ -12,6 +12,7 @@ import Dependencies
 
 @Reducer
 struct AppReducer {
+    @ObservableState
     struct State: Equatable {
         var path = StackState<Route>()
         var home: HomeReducer.State?

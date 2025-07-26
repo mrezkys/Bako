@@ -2,6 +2,7 @@ import ComposableArchitecture
 
 @Reducer
 struct SelectCategoryFeelingReducer {
+    @ObservableState
     struct State: Equatable {
         var selectedEmotionCategory: EmotionCategory?
     }

@@ -10,6 +10,7 @@ import ComposableArchitecture
 
 @Reducer
 struct OnboardingReducer {
+    @ObservableState
     struct State: Equatable {
         var hasSeenOnboarding: Bool = false
     }
