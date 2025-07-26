@@ -10,5 +10,7 @@ import Foundation
 
 let appStore = Store(
     initialState: AppReducer.State(),
-    reducer: { AppReducer()._printChanges() }
+    reducer: {
+        AppReducer()
+    }
 )
